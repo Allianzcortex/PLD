@@ -40,4 +40,6 @@ some english illustration"""
     def __doc__(self):
 
         return _get_doc().get('en')
-
+   
+    def __cal__(self):
+         # now execute the real sort 
