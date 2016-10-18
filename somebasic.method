@@ -1,0 +1,17 @@
+def merge_sort():
+   """  
+   There are three ways implemented:merge_sort1(),merge_sort2(),merge_sort3()
+   You can just use one of them
+
+   merge sort is based
+   """
+
+
+def solve(problem):
+   print problem.__doc__
+
+
+def lc_23():
+   """
+   solution1:
+   """
