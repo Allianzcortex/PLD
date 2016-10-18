@@ -15,3 +15,40 @@ def lc_23():
    """
    solution1:
    """
+
+
+# 关于 doc 的设置
+
+def help_cn(problem):
+    return problem._get_doc().get('en')
+
+
+def help_en(problem):
+    return problem.__doc__
+
+
+class lc_23(object):
+
+
+    def _get_doc(self):
+        doc_cn = """
+      some chinese illustration
+
+      """
+
+        doc_en = """
+
+      some english illustration
+      """
+
+      help_doc = {'cn': doc_cn,'en': doc_en}
+
+      return help_doc
+
+    def __doc__(self):
+
+        return _get_doc().get('en')
+
+
+    def __call__(self):
+         """ use the method to call func"""
