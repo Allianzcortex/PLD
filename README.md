@@ -1,6 +1,7 @@
 ### bweever
 **Algorithm Implement Library**
 
+---
 
 #### 项目起源
 
@@ -45,12 +46,15 @@ def help_en(problem):
 
 ```
 
+---
+
 #### 目前进展
 
 如果有时间的话还是挺想实现以前的想法的o(╯□╰)o，但目前可以完全把 bweever 当做一个算法集合库来看待，在其中实现了常用的 `字符串、图、树、链表` 等数据结构，以及 `DFS、BFS、DP、KMP` 等算法。
 
 实现语言包括 `Java` 与 `Python`，一部分包含了 `Scala` 的实现。
 
+---
 
 **列表集合**
 
