@@ -11,17 +11,15 @@ class AlgorithmImplementation(object):
 
     @staticmethod
     def _get_doc():
-        doc_cn = """
-      some chinese illustration"""
-        doc_en = """
-some english illustration"""
+        doc_cn = """some chinese illustration"""
+        doc_en = """some english illustration"""
         help_doc = {'cn': doc_cn, 'en': doc_en}
         return help_doc
 
     def __doc__(self):
         return AlgorithmImplementation._get_doc().get('en')
 
-    def __cal__(self):
+    def __call__(self):
          """ now execute the real sort """ 
 
 ```
