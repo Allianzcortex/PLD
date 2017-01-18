@@ -1,4 +1,3 @@
-package Test;
 
 /**
  * 包含了各种链表题目
@@ -81,14 +80,29 @@ public class LinkedList {
 
     // -------------------------------------------------------------------------------------------
 
+
     /**
+     * Leetcode 206 https://leetcode.com/problems/reverse-linked-list/
      * 这道题一开始只给了一个说明，就是逆转链表
      * 各种 edge case 都需要自己想
+     * 显然也是有 recursive 和 iterative 两种解法
      *
      * @param head
      * @return
      */
+
+    // 递归求解
     public ListNode reverseLinkedList1(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        // 完成一个备份
+        ListNode nextNode = head.next;
+        ListNode newHead = reverseLinkedList1(nextNode);
+        nextNode.next = head;  // head nextNode newHead
+        head.next = null;
+        showLinkedList(newHead);
+        System.out.println(head.val);
+        return newHead;
 
     }
 
@@ -136,6 +150,10 @@ public class LinkedList {
         // 测试交换节点，迭代法 swapPairs2()//
         ListNode head3 = linkedList.structLinkedList();
         linkedList.showLinkedList(linkedList.swapPairs2(head3)); // 2——>1——>4——>3
+
+        // 测试逆转链表，递归法
+        ListNode head4 = linkedList.structLinkedList();
+        linkedList.showLinkedList(linkedList.reverseLinkedList1(head4));
     }
 }
 
