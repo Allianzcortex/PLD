@@ -60,10 +60,10 @@ def help_en(problem):
 
 | 目录  | 内容 |
 | ------------- | ------------- |
-| **Others**   | [BigInteger](大数)|
-|              | [NQueuens](N 皇后问题)|
-|              | [ReversePolishNotation](后缀表达式求值)|
-|              | [MinStack](包含最小元素的栈)|
+| **Others**   | [BigInteger](/Others/BigInteger)|
+|              | [NQueuens](/Others/NQueuens)|
+|              | [ReversePolishNotation](/Others/ReversePolishNotation)|
+|              | [MinStack](/Others/MinStack)|
 |**KMP**| [KMP](/KMP) |
 |**LinkedList**| [KMP](/LinkedList) |
 |**Graph**|[基本算法](/Graph/BasicGraph)|
@@ -77,8 +77,8 @@ def help_en(problem):
 |        |[Trie](/Tree/Trie)|
 |**DP**|[DP(LIS/LCS)](/DP)|
 |**Design Pattern**|[单例模式-SingleTon](/design-patterns/单例模式-singleton)|
-|                  |[状态模式-StatePattern(/design-patterns/状态模式-StatePattern)]|
-|                  |[装饰器模式-Decorators(/design-patterns/装饰器模式-decorators)]|
+|                  |[状态模式-StatePattern](/design-patterns/状态模式-StatePattern)|
+|                  |[装饰器模式-Decorators](/design-patterns/装饰器模式-decorators)|
 
 
 
