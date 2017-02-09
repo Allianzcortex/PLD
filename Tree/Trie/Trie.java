@@ -34,14 +34,18 @@ class TrieNode {
 public class Trie {
     TrieNode root;
 
+    public Trie() {
+        root = new TrieNode((char) 0);
+    }
+
     // 负责创建一个 Trie，并写入
     public void insert(String input) {
         int length = input.length();
         TrieNode target = root;
         int level, prevMatch = 0;
         for (level = 0; level < length; level++) {
-            char ch = input.charAt(level);
-            HashMap<char, TreeNode> children = target.getChildren();
+            Character ch = input.charAt(level);
+            HashMap<Character, TrieNode> children = target.getChildren();
             if (children.containsKey(ch)) {
                 target = children.get(ch);
             } else {
@@ -61,8 +65,8 @@ public class Trie {
         int level;
         int prevMatch = 0;
         for (level = 0; level < length; level++) {
-            char ch = input.charAt(level);
-            HashMap children = root.getChildren();
+            Character ch = input.charAt(level);
+            HashMap<Character, TrieNode> children = target.getChildren();
             if (children.containsKey(ch)) {
                 builder.append(ch);
                 target = children.get(ch);
@@ -72,25 +76,28 @@ public class Trie {
                     prevMatch = level + 1;
             } else {
                 break;
-                ;
             }
         }
         String result = builder.toString();
-        if (!target.isEnd())
+
+        if (!target.isEnd()) {
             return result.substring(0, prevMatch);
-        else
+        } else
             return result;
     }
 
     public String getCommonPrefix(TreeNode root) {
         // 返回一系列字串的公共最长字串
+        return "";
     }
 
     public static void main(String[] args) {
         Trie trie = new Trie();
-        trie.root = new TrieNode(); // pass
+        trie.insert("add");
+        trie.insert("ad");
+        System.out.println(trie.findPrefixMatch("ad"));
 
-        // 还有一道题目是
+        // 还有一道题目是找出公共最长字串
     }
 }
 
