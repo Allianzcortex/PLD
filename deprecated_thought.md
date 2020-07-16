@@ -1,3 +1,4 @@
+```Python
 def merge_sort():
    """  
    There are three ways implemented:merge_sort1(),merge_sort2(),merge_sort3()
@@ -15,9 +16,11 @@ def lc_23():
    """
    solution1:
    """
+```
 
+# About Doc
 
-# 关于 doc 的设置
+```Python
 
 def help_cn(problem):
     return problem._get_doc().get('en')
@@ -43,3 +46,15 @@ some english illustration"""
 
     def __cal__(self):
          """ now execute the real sort """ 
+```
+
+---
+
+```
+Package1: CC150
+Package2: Sw_2_of
+Package3: LC
+Package4: Knowledge
+Package5: Interview Question
+
+```
