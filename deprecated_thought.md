@@ -54,7 +54,8 @@ some english illustration"""
 Package1: CC150
 Package2: Sw_2_of
 Package3: LC
-Package4: Knowledge
-Package5: Interview Question
+Package4: DDUP + Weekly Contest
+Package5: Knowledge
+Package6: Interview Question
 
 ```
