@@ -1,4 +1,11 @@
 Classic Problem.
+
+related :
+
+326 Power of three
+342 Power of four
+50 Pow(x,n)
+
 There are different solutions
 
 1. Solution 1 Recursive
