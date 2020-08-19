@@ -5,3 +5,4 @@
 39 M : Combination Sum
 77 M : Combination
 967 M: Numbers With Same Consecutive Differences
+529:M: Mine Sweeper
