@@ -45,9 +45,80 @@ class Solution {
 
 ```
 
+This is Merge Sort 
+
+```Java
+class Solution {
+    public int[] sortArray(int[] nums) {
+        mergeSort(nums,0,nums.length-1);
+        return nums;
+    }
+    
+    public void mergeSort(int[] nums,int left,int right) {
+        if(left>=right)
+            return;
+        int middle = left + (right-left)/2;
+        mergeSort(nums,left,middle);
+        mergeSort(nums,middle+1,right);
+        merge(nums,left,middle,right);
+    }
+    
+    public void merge(int[] nums,int left,int middle,int right) {
+        int[] temp = new int[right-left+1];
+        int i=left,j=middle+1;
+        int index = 0;
+        while(i<=middle && j<=right) {
+            if(nums[i]<nums[j])
+                temp[index++]=nums[i++];
+            else
+                temp[index++]=nums[j++];
+        }
+        
+        while(i<=middle)
+            temp[index++]=nums[i++];
+        while(j<=right)
+            temp[index++]=nums[j++];
+        
+        for(i=0;i<temp.length;i++)
+            nums[left+i]=temp[i];
+    }
+}
+
+```
+
+This is bubble sort 
+
+```Java
+
+class Solution {
+    public int[] sortArray(int[] nums) {
+        // 3 5 4 1 2
+        // * * * * 5
+        // * * * 4 5
+        // * * 3 4 5
+        int n=nums.length;
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n-i-1;j++) {
+                if(nums[j]>nums[j+1])
+                    swap(nums,j,j+1);
+            }
+        }
+        
+        return nums;
+    }
+    
+    public void swap(int[] nums,int i,int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+
+```
+
 ---
 
-The same idea with Python implementation
+The same idea with Python quicksort implementation
 
 ```Python
 
