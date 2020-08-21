@@ -4,5 +4,6 @@
 106: M: Construct Binary Tree from Inorder and Postorder Traversal
 230: M: Kth Smallest Element in a BST
 110: E: Balanced Binary Tree
+111: E: Min Depth of Binary Tree
 109: M: Convert Sorted List to BST
 ```
