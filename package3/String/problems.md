@@ -6,4 +6,6 @@
 43:M: Multiply Strings
 415:E: Add Strings
 
+44:H: Wildcard Matching
+
 ```

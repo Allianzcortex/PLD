@@ -7,4 +7,5 @@
 111: E: Min Depth of Binary Tree
 109: M: Convert Sorted List to BST
 98: M: Validate Binary Search Tree
+257:E: Binary Tree Paths
 ```

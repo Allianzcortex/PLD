@@ -1,3 +1,4 @@
+```
 212 H :Word Search II in list.
 79  M :Word Search in list.
 797 M :All Paths from Source to Target.
@@ -6,3 +7,6 @@
 77 M : Combination
 967 M: Numbers With Same Consecutive Differences
 529:M: Mine Sweeper
+22:M: Generate Parenthesis
+257:E: Binary Tree Paths
+```
