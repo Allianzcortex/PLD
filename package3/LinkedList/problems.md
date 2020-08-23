@@ -1,3 +1,4 @@
+```
 2:M:Add Two Numbers
 445:M:Add Two Numbers II
 206:E:Reverse Linked List
@@ -8,3 +9,5 @@
 141: E: Linked List Cycle
 142: M: Linked List Cycle II 
 143: M: Reorder List
+86:  M: Partition List
+```
