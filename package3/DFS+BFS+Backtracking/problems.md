@@ -9,4 +9,5 @@
 529:M: Mine Sweeper
 22:M: Generate Parenthesis
 257:E: Binary Tree Paths
+491:M: Increasing Subsequences
 ```
