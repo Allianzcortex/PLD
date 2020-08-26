@@ -63,3 +63,7 @@ class Solution {
 
 
 ```
+
+Python Solution:
+
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/8063/Python-solution
