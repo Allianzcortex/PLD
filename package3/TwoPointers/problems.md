@@ -2,5 +2,10 @@
 ```
 33:M: Search in Rotated Sorted Array
 26:E: Remove Duplicates from Sorted Array
+436:M: Find Right Interval
 
+167:E: Two Sum II Input Array is Sorted
+345:E: Reverse Vowels of a String
+633:E: Sum of Square Numbers
+680:E: Valid Palindrome II
 ```
