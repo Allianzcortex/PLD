@@ -7,5 +7,7 @@
 415:E: Add Strings
 
 44:H: Wildcard Matching
+459:E: Repeated Substring Pattern
+557:E: Reverse Words in a String III
 
 ```
