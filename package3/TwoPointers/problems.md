@@ -8,4 +8,5 @@
 345:E: Reverse Vowels of a String
 633:E: Sum of Square Numbers
 680:E: Valid Palindrome II
+42:H: Trapping Rain Water
 ```
