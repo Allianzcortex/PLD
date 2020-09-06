@@ -11,4 +11,5 @@
 404:E: Sum of Left Leaves
 653:E: Two Sum IV - Input is a BST
 938:E: Range Sum of BST
+700:E: Search in a Binary Search Tree
 ```
