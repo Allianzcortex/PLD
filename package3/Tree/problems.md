@@ -13,4 +13,5 @@
 938:E: Range Sum of BST
 700:E: Search in a Binary Search Tree
 1305:M: All Elements in Two Binary Search Trees
+1022:E: Sum of Root To Leaf Binary Numbers
 ```
