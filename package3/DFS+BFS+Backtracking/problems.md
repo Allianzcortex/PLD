@@ -11,4 +11,6 @@
 257:E: Binary Tree Paths
 491:M: Increasing Subsequences
 17:M: Combinations of a Phone Number
+257:E: Binary Tree Paths
+126:M: Combination Sum III
 ```
