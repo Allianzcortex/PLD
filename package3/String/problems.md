@@ -10,4 +10,6 @@
 459:E: Repeated Substring Pattern
 557:E: Reverse Words in a String III
 541:E: Reverse String II
+344:E: Reverse String
+459:E: Repeated Substring Pattern
 ```
