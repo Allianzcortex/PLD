@@ -11,4 +11,5 @@
 14:E:  LCP Longest Common Prefix
 44:H: Wildcard Matching
 152:M: Maximum Product Subarray
+1048:M: Longest String Chain
 ```
