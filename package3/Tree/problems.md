@@ -15,4 +15,7 @@
 1305:M: All Elements in Two Binary Search Trees
 1022:E: Sum of Root To Leaf Binary Numbers
 107:E: Binary Tree Level Order Traversal II
+94_144_145:M: Binary Pre In Post Order 3 Problems
+96:M: Unique BST
+426:M: Convert BST to Sorted Doubly LinkedList
 ```
