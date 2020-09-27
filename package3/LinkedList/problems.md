@@ -11,4 +11,8 @@
 143: M: Reorder List
 86:  M: Partition List
 234: E: Palindrome Linked List
+24: M: Swap Nodes in Pairs
+
+328: M: Odd Even LinkedList
+1290:E: Convert Binary Number in a Linked List to Integer
 ```

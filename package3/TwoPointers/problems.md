@@ -14,8 +14,13 @@
 278:E: First Bad Version
 653:E: Two Sum IV - Input is a BST
 633:E: Sum_of_Square_Numbers.md 
-167:E: Two_Sum_II_Input_Array_Is_Sorted.md 
 680:E: valid_palindrome_II.md 
 345:E: Reverse_Vowels_of_a_String.md
 763:M: Partition Labels
+11:M:  Container with Most Water
+
+34:M: Find First and Last Position of Elements in Sorted Array
+16:M: 3 sum closest
+
+4:H: Median of Two Sorted Arrays
 ```

@@ -3,6 +3,10 @@ Actually I still have difficulty understanding the problem...
 
 At the end : reach the last or the one near the last step ?
 
+A very good link to explain all DP problems :
+
+https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning
+
 ```Java
 
 class Solution {
@@ -24,5 +28,6 @@ class Solution {
 }
 
 ```
+
 
 TODO: Add Python Solution

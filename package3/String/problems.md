@@ -12,4 +12,14 @@
 541:E: Reverse String II
 344:E: Reverse String
 459:E: Repeated Substring Pattern
+28:E: Implement strStr()
+8:M: String to Integer(atoi)
+6:M: ZigZag Conversion
+387:E: First Unique Character in a String
+38:E: Count and Say
+
+179:M: Largest Number
+
+151:M: Reverse Words in a String
+67:E: Add Binary
 ```

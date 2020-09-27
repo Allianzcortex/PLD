@@ -4,7 +4,8 @@ Ba
 1. Recursive Solution :
 
 #### Well,it just seems easy to understand,but revursive solution
-is not so straight-forward
+is not so straight-forward. You need to know the real meaning of tail
+or you will easily forget it next time.
 
 ```Java
 
@@ -53,3 +54,5 @@ class Solution {
 }
 
 ```
+
+TODO : Add Python Solution

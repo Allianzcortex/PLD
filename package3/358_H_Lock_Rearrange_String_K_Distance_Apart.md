@@ -23,6 +23,11 @@ The same letters are at least distance 2 from each other.
 ```
 
 
+Still not validated and a little confused
+
+Another solution is here : https://github.com/YaokaiYang-assaultmaster/LeetCode/blob/master/LeetcodeAlgorithmQuestions/358.%20Rearrange%20String%20k%20Distance%20Apart.md
+
+
 ---
 
 

@@ -6,6 +6,8 @@ For example, we donot need to use a boolean[][] arry to check whether
 this square is used,just set it to -2 and change the condition into
 if(grid[x][y]<0). 
 
+And also it will be better if we can remove global variables.
+
 ```Java
 
 class Solution {
@@ -56,3 +58,5 @@ class Solution {
 }
 
 ```
+
+TODO : check explanations && add more solutions

@@ -18,4 +18,51 @@
 94_144_145:M: Binary Pre In Post Order 3 Problems
 96:M: Unique BST
 426:M: Convert BST to Sorted Doubly LinkedList
+637:E: Average of Levels in a Binary Tree
+
+1469 E Find all the lonely nodes
+617 E  Add Two Binary Trees
+
+590 E N Ary Tree Post Order
+589 E N Ary Tree Pre Order
+897 E Increasing Order Search Tree
+
+559 E Maximum Depth of n ary Tree
+965 E Univalued Binary Tree
+104 E Maximum Depth of Binary Tree
+226 E Invert Binary Tree
+872 E Leaf-Similar Trees
+699 E Trim a Binary Search Tree
+1379 M Find a Corresponding Node of a Binary Tree in a Clone of That Tree
+1302 M Deepest Leaves Sum
+1490 M Clone N Ary Tree
+
+1315 M Sum ofNodes with Even-Valued Grandparent | water
+1008 M Construct Binary Search Tree from Preorder Traversal
+654 M Maximum Binary Tree
+951 E Flip Equivalent Binary Tree
+429 M N-ary Tree Level Order Traversal
+1062 M Maximum Difference Between Node and Ancestor
+889 M Construct Binary Tree from Preorder and Postorder
+108 E Convert Sorted Array to Binary Search Tree
+538 E Convert BST to Greater Tree
+606 E Construct String from Binary Tree
+530 E Minimum Absolute Difference in BST
+100 E Same Tree
+
+783:E: Minimum Distance Between BST Nodes
+993:E: Coursins in Binary Tree
+257:E: Binary Tree Paths
+235:E: Lowest Common Ancestor of Binary Search Tree
+701:M: Insert into a Binary Search Tree
+
+501:E: Find Mode in Binary Search Tree
+
+95:M: Unique Binary Search Trees II
+894:M: All Possible Full Binary Trees
+113:M: Path Sum II
+112:E: Path Sum
+666:Lock:M: Path Sum IV
+437:M: Path Sum III
+337:M: House Robber III
 ```
