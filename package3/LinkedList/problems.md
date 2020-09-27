@@ -18,4 +18,5 @@
 1474:E: Delete N Nodes After M Nodes of a LinkedList
 
 876:E: Middle of the Linked List
+237:E: Delete Node in a Linked List
 ```
