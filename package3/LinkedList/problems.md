@@ -15,4 +15,7 @@
 
 328: M: Odd Even LinkedList
 1290:E: Convert Binary Number in a Linked List to Integer
+1474:E: Delete N Nodes After M Nodes of a LinkedList
+
+876:E: Middle of the Linked List
 ```

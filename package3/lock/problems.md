@@ -12,4 +12,5 @@
 276 E Paint Fence
 170 E Two Sum III Data Structure Design
 ? 358 H Rearrange String k Distant Apart
+1474 E Delete N Nodes After M Nodes of a LinkedList
 ```
