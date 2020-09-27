@@ -20,4 +20,5 @@
 876:E: Middle of the Linked List
 237:E: Delete Node in a Linked List
 817:M: Linked List Components
+725:M: Split Linked List in Parts
 ```
