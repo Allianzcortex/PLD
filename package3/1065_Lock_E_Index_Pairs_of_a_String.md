@@ -31,6 +31,8 @@ then it seems overkill.
 
 We just need to continue using the built-in method to find the index
 
+TODO : Not Validated. Still need to check more.
+
 Java Solution:
 
 ```Java
