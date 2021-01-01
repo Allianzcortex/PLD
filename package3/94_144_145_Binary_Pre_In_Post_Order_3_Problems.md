@@ -92,3 +92,60 @@ class Solution {
 }
 
 ```
+
+---
+
+
+Next I will add Golang Solution here:
+
+144 PreOrder
+94  InOrder
+
+```Golang
+
+//  revursive solution
+func inorderTraversal(root *TreeNode) []int {
+    var res []int
+    traverse(root,&res)
+    return res
+}
+
+func traverse(root *TreeNode,res *[]int) {
+    if(root==nil) {
+        return
+    }
+    traverse(root.Left,res);
+    *res = append(*res,root.Val);
+    traverse(root.Right,res);
+}
+
+```
+
+```Golang
+
+// iteration solution
+
+func inorderTraversal(root *TreeNode) []int {
+    
+    res:=make([]int,0)
+    stack:=make([]*TreeNode,0)
+    
+    for root!=nil || len(stack)>0 {
+        for root!=nil {
+            stack=append(stack,root)
+            root = root.Left
+        }
+        
+        root = stack[len(stack)-1]
+        res = append(res,root.Val)
+        root = root.Right
+        stack = stack[:len(stack)-1]
+    }
+    
+    return res
+    
+    
+}
+
+```
+145 PostOrder
