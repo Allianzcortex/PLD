@@ -8,4 +8,10 @@
 496: E : Next Greater Element I
 503: M : Next Greater Element II
 739: M : Daily Temperatures
+
+316:M: Remove Duplicate Letters
+844:E: Backspace String Compare
+
+735:M: Asteroid Collision
+232:E: Implement Queue Using Stacks
 ```
