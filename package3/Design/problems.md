@@ -2,5 +2,7 @@
 211:M: Add and Search Word - Data Structure Design
 146:M: LRU Cache
 170:E: Two Sum III Data Structure Design
-
+707:M: Design Linked List
+933:E: Number of Recent Calls
+706:E: Design HashMap
 ```
