@@ -65,4 +65,7 @@
 666:Lock:M: Path Sum IV
 437:M: Path Sum III
 337:M: House Robber III
+
+116:M: Populating Next Right Pointers in Each Node
+623:M: Add One Row to Tree
 ```
