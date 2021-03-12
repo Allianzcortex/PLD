@@ -61,6 +61,46 @@ class Solution {
 
 ```
 
+Below is Python Solution:
+
+```Python
+# recursive 
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        res = []
+        self.helper(root,res)
+        return res
+    
+    def helper(self,root,res):
+        if root is None:
+            return
+        self.helper(root.left,res)
+        res.append(root.val)
+        self.helper(root.right,res)
+
+```
+
+```Python
+# iterative
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        res,stack=[],[]
+        cur = root
+        if root is None:
+            return res
+        
+        while stack or cur:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            cur = stack.pop()
+            res.append(cur.val)
+            cur = cur.right
+        return res
+        
+
+```
+
 ---
 
 PostOrder 145 :
