@@ -5,4 +5,6 @@
 707:M: Design Linked List
 933:E: Number of Recent Calls
 706:E: Design HashMap
+
+535:M: Encode and Decode TinyURL
 ```
