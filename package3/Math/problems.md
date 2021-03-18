@@ -12,4 +12,6 @@
 370 M Range Addition
 36 M Valid Sudoku
 37 H Sudoku Solver
+
+478 M Generate Random Point in a Circle
 ```
