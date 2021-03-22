@@ -22,4 +22,8 @@
 31:M Next Permutation
 36 M Valid Sudoku
 37 H Sudoku Solver
+
+949:M: Largest Time for Given Digits
+
+841:M: Keys and Rooms
 ```
