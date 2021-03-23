@@ -22,4 +22,51 @@
 
 151:M: Reverse Words in a String
 67:E: Add Binary
+
+1108:E: Defanging an IP Address
+1165:E: Single Row Keyboard
+1309:E: Decrypt String from Alphabet to Integer Mapping
+1616:M: Split Two Strings to Make Palindrome
+1455:E: Check if a word occur as a prefix of any owrd in a sentence
+
+316:M: Remove Duplicate Letters
+1408:E: String Matching in an Array
+
+859:E: Buddy Strings
+408:E:Lock: Valid Word Abbreviation
+58:E: Length of Last Word
+
+1189:E: Maximum number of Balloons
+1132:E: Remove Palindromic Subsequences
+1507:E: Reformat Date
+443:M: String Compression
+
+1446:E: Consecutive Characters
+1170:E: Compare Strings by Frequency of the Smallest Character
+917:E: Reverse Only Letters
+1556:E: Thousand Separator
+293:E:Local: Flip Game
+1065:E: Index Pairs of a String
+800:E:Similar RGB Color
+551:E: Student Attendance Record I
+1576:E: Replace All ?'s to Avoid Consecutive Repeating Characters
+1071:E: Greaest Common Divisor of Strings
+383:E: Ransom Note
+
+937:E:Reorder Data in Log Files
+1271:E: Hex Speak
+1544:E: Make the String Great
+1417:E: Reformat the String
+1422:E: Maximum Score After Splitting a String
+1496:E: Path Crossing
+
+12:M: Integer to Roman
+273:H: Integer to English Words
+521:E: Longest Uncommon Subsequence I
+696:E: Count Binary Substrings
+796:E: Rotate String
+788:E: Rotate Digits
+13:E: Roman to Integer
+
+966:M: Vowel Spellchecker
 ```
