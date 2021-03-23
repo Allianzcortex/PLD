@@ -7,4 +7,5 @@
 706:E: Design HashMap
 
 535:M: Encode and Decode TinyURL
+341:M: Flatten Nested List Iterator
 ```
