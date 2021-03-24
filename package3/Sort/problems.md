@@ -5,4 +5,5 @@
 75  M Sort Colors
 451 M Sort Characters by Frequency
 
+870 M Advantage Shuffle
 ```
