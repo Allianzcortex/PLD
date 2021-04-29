@@ -23,4 +23,8 @@
 16:M: 3 sum closest
 
 ? 4:H: Median of Two Sorted Arrays
+
+713:M: Subarray Product Less Than K
+
+153:M: Find Minimum in Rotated Sorted Array
 ```

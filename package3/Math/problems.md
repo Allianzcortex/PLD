@@ -14,4 +14,7 @@
 37 H Sudoku Solver
 
 478 M Generate Random Point in a Circle
+869 M Reordered Power of 2
+
+423 M Reconstruct Original Digits from English
 ```

@@ -21,4 +21,13 @@
 237:E: Delete Node in a Linked List
 817:M: Linked List Components
 725:M: Split Linked List in Parts
+148:M: Sorted List
+147:M: Insertion Sort
+1367:M: Linked List Binary Tree
+707:M: Design Linked List
+138:M: Copy List with Random Pointer
+82:M: Remove Duplicates from Sorted List II
+19:M: Remove Nth Node from End of List
+
+61:M: Rotate List
 ```
