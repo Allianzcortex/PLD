@@ -52,6 +52,47 @@ class Solution {
 
 ```
 
-TODO : have a more solid understanding about binary search
-
 https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/
+
+While the Java Solution may not be bad,this Python one is better :
+
+```Python
+
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        """
+        Input: nums = [5,7,7,8,8,10], target = 8
+        Output: [3,4]
+        
+        """
+        
+        if nums is None or len(nums)==0:
+            return [-1,-1]
+        
+        return [self.findElement(nums,target,0),self.findElement(nums,target,1)]
+    
+    def findElement(self,nums:List[int],target:int,flag:int):
+        # flag : flag=0 means its to find firstIndex
+        #        flag=1 means its to find lastIndex
+        left,right=0,len(nums)-1
+        res = -1
+        
+        while left<=right:
+            middle = left + (right-left)//2
+            if (nums[middle]>target):
+                right = middle -1
+            elif (nums[middle]<target):
+                left = middle + 1
+            else:
+                res = middle
+                # for firstIndex,we try to find from the left of middle, so right = middle -1
+                # for lastIndex,we try to find from the right of middle, so left = middle +1
+                if flag==0:
+                    right = middle-1
+                else:
+                    left = middle+1
+        
+        return res
+        
+
+```
