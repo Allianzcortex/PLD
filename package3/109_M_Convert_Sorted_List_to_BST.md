@@ -85,3 +85,36 @@ class Solution:
         return root
 
 ```
+
+Yet another Python version
+
+```Python
+
+class Solution:
+    def sortedListToBST(self, head: ListNode) -> TreeNode:
+        if head is None:
+            return None
+        if head.next is None:
+            return TreeNode(head.val)
+        # middle listnode -> next 
+        # 1->2->3->4->5
+        print(head.val)
+        slow,fast = head,head.next.next
+        
+        while fast is not None and fast.next is not None:
+            fast = fast.next.next
+            slow = slow.next
+        
+        # now slow will be the middle node
+        root = TreeNode(slow.next.val)
+        temp = slow.next.next
+        slow.next = None
+        
+        root.left = self.sortedListToBST(head)
+        root.right = self.sortedListToBST(temp)
+        
+        return root
+
+```
+
+With the use of `pre` the whole code structure is more clear and I prefer to use it.
