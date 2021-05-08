@@ -27,4 +27,6 @@
 713:M: Subarray Product Less Than K
 
 153:M: Find Minimum in Rotated Sorted Array
+
+906:H: Super Plindromes
 ```
