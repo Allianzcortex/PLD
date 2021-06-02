@@ -30,4 +30,6 @@
 
 78:M: Subsets
 90:M: Subsets II
+
+695:M: Max Area of Island
 ```
