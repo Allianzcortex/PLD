@@ -36,4 +36,25 @@ class Solution {
 
 ```
 
-TODO : Use an array[] to optimize the space complexity.
+While using Python , this will be a classic sliding window problem:
+
+Here is Python Solution:
+
+```Python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left = 0
+        res = 0
+        counter = defaultdict(lambda:0)
+        
+        for right in range(len(s)):
+            right_ch = s[right]
+            while counter[right_ch] != 0:
+                counter[s[left]]-= 1
+                left += 1
+            
+            counter[right_ch]+=1
+            res = max(res,right-left+1)
+        
+        return res
+```
