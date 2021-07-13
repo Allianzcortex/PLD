@@ -70,4 +70,6 @@
 
 966:M: Vowel Spellchecker
 709:E: To Lower Case
+
+205:E: Isomorphic Strings
 ```
