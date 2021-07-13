@@ -117,5 +117,124 @@ class LRUCache {
     }
 }
 
+```
 
+While when I review this answer, I need to say Java solution is a good one, however
+very difficult to come up with it during the interview. 
+
+What we need is a more reasonable solution.
+
+Here is my Python version :
+
+Use solution like double-linked-list:
+
+We put the [LRU item] at the end of LRUCache.
+
+Logic:
+
+Get:
+    a. if key doesn't exist, return -1
+    b. if key exists : 
+       1. move the item to the end(delte it firslty & add it)
+       2. return value
+
+Put:
+    a. if key exists, remvoe it
+    b. add the (Key:Value) pair(and move it to the end of LRU Cache)
+    c. if it exceeds the cap limit, remove the head item
+
+```Python
+
+class Node(object):
+    def __init__(self,key,value):
+        self.key = key
+        self.value = value
+        self._prev = None
+        self._next = None
+
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        
+        self.capacity = capacity
+        self.dict = {}
+        self.head = Node(0,0)
+        self.tail = Node(0,0)
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        
+
+    def get(self, key: int) -> int:
+
+        if key not in self.dict:
+            return -1
+        node = self.dict[key]
+        self._remove(node)
+        self._add(node)
+        return self.dict[key].value
+
+    def put(self, key: int, value: int) -> None:
+        """
+        If we find the key exist, we remove the key
+        """
+        if key in self.dict:
+            self._remove(self.dict[key])
+        new_node = Node(key,value)
+        self._add(new_node)
+        if len(self.dict) > self.capacity:
+            self._remove(self.head.next)
+    
+    def _add(self,node):
+        """
+        tail.prev   tail
+        
+        wanna insert node to the middle of [tail.prev] and [tail]
+        """
+        prev_node = self.tail.prev
+        # do 4 steps
+        # firstly , handle prev_node and middle node
+        prev_node.next = node
+        node.prev = prev_node
+        # secondly , handle middle node and tail
+        node.next = self.tail
+        self.tail.prev = node
+        self.dict[node.key] = node
+    
+    def _remove(self, node):
+
+        prev_node,next_node = node.prev,node.next
+        prev_node.next = next_node
+        next_node.prev = prev_node
+        del self.dict[node.key]
+
+```
+
+Obviously there will be 2 ways to optimize it :
+
+1. There is no need for Node object. We can use 2 dicts(prev={},next={})
+   to store the relationship : https://leetcode.com/problems/lru-cache/discuss/45926/Python-Dict-+-Double-LinkedList/185966
+
+2. We can use a Python built-in data structure called `OrderedDict`.
+
+It will be like below:
+
+```Python
+
+from collections import OrderedDict
+class LRUCache:
+    def __init__(self, Capacity):
+        self.size = Capacity
+        self.cache = OrderedDict()
+
+    def get(self, key):
+        if key not in self.cache: return -1
+        val = self.cache[key]
+        self.cache.move_to_end(key)
+        return val
+
+    def put(self, key, val):
+        if key in self.cache: del self.cache[key]
+        self.cache[key] = val
+        if len(self.cache) > self.size:
+            self.cache.popitem(last=False)
 ```
