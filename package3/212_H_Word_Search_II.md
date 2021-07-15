@@ -240,3 +240,70 @@ class Solution {
 
 
 ```
+
+For Java Implementaion, logic is really a bit complex :
+
+Here is my Python Implementation :
+
+```Python
+
+class TrieNode(object):
+    
+    def __init__(self):
+        self.children = {}
+        self.is_word = False
+
+class Trie(object):
+    
+    def __init__(self):
+        self.root = TrieNode()
+    
+    def insert(self,word):
+        current = self.root
+        
+        for w in word:
+            if w not in current.children:
+                current.children[w] = TrieNode()
+            current = current.children[w]
+        
+        current.is_word = True
+
+
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        
+        if not board or len(board) == 0:
+            return []
+        
+        res = []
+        trie = Trie()
+        for w in words:
+            trie.insert(w)
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                self.check(board,i,j,trie.root,res,"")
+                
+        return res
+    
+    def check(self,board,i,j,node,res,path):
+        if node.is_word:
+            res.append(path)
+            node.is_word = False
+            # here should not return , for words like [oath]/[oathk]
+            # even if we find oath, we still need to continue to find oathk
+            # return
+        
+        if i<0 or i>=len(board) or j<0 or j>=len(board[0]):
+            return
+        
+        cur_char = board[i][j]
+        if cur_char not in node.children:
+            return
+        node = node.children[cur_char]
+        board[i][j] = '#'
+        directions = [(0,1),(0,-1),(-1,0),(1,0)]
+        for x,y in directions:
+            self.check(board,i+x,j+y,node,res,path+cur_char)
+        board[i][j] = cur_char
+
+```
