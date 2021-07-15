@@ -11,4 +11,6 @@
 
 88 E Merge Sorted Array
 1437 E Check If All 1's Are at Least Length K Places Away
+
+674 E Longest Continuous Increasing Subsequence
 ```
