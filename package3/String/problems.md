@@ -72,4 +72,5 @@
 709:E: To Lower Case
 
 205:E: Isomorphic Strings
+791:M: Custom Strings
 ```

@@ -29,4 +29,5 @@
 153:M: Find Minimum in Rotated Sorted Array
 
 906:H: Super Plindromes
+300:M: Longest Increasing Subsequence
 ```
