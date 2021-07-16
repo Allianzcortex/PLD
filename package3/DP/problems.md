@@ -32,4 +32,6 @@
 
 799:M: Champagne Tower
 
+72:H:  Edit Distance
+139:M: Word Break
 ```
