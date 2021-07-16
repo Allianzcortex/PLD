@@ -30,4 +30,6 @@
 
 906:H: Super Plindromes
 300:M: Longest Increasing Subsequence
+
+15:M: 3Sum
 ```
