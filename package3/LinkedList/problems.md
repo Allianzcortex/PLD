@@ -30,4 +30,5 @@
 19:M: Remove Nth Node from End of List
 
 61:M: Rotate List
+25:H: Reverse Nodes in K Group
 ```
