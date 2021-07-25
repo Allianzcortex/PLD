@@ -17,4 +17,6 @@
 869 M Reordered Power of 2
 
 423 M Reconstruct Original Digits from English
+
+611 M Valid Triangle Number
 ```

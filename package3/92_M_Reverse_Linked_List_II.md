@@ -30,7 +30,6 @@ class Solution {
         ListNode then = cur.next;
         
         for(int i=0;i<n-m;i++) {
-            System.out.println(cur.val);
             ListNode temp = then.next;
             then.next = pre.next;
             pre.next = then;

@@ -199,7 +199,28 @@ class Solution:
 
 ```
 
-2. solution2 : 
+2. solution2 : add duplicated number , the idea is very similar with solution1,but using a 
+different implementation
+
+```Python
+class Solution:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        if root is None:
+            return []
+        res,stack = [],[root]*2
+        
+        while stack:
+            cur = stack.pop()
+            if (stack and stack[-1]==cur):
+                if cur.right:
+                    stack+=[cur.right]*2
+                if cur.left:
+                    stack+=[cur.left]*2
+            else:
+                res.append(cur.val)
+        
+        return res
+```
 
 ---
 

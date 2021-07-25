@@ -59,6 +59,10 @@ class CQueue {
 
 Below is the right Python Solution :
 
+complexity analysis:
+
+
+
 ```Python
 
 class CQueue:

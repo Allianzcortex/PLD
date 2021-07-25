@@ -14,4 +14,6 @@
 
 735:M: Asteroid Collision
 232:E: Implement Queue Using Stacks
+
+402:M: Remove K Digits
 ```

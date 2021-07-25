@@ -1,5 +1,5 @@
 
-Java SOlution
+Java Solution
 
 ```Java
 
