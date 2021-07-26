@@ -1,4 +1,35 @@
 
+Problem Description:
+
+```
+
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+Example 2:
+
+Input: head = [1], n = 1
+Output: []
+Example 3:
+
+Input: head = [1,2], n = 1
+Output: [1]
+ 
+
+Constraints:
+
+The number of nodes in the list is sz.
+1 <= sz <= 30
+0 <= Node.val <= 100
+1 <= n <= sz
+
+```
 
 Java Solution
 
@@ -32,5 +63,62 @@ class Solution {
 
 ```
 
+Python Solution :
 
-TODO: check discussion for other solutions & Python solution
+自己一开始的解法如下：
+
+```Python
+
+class Solution:
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        dummy = ListNode(-1)
+        
+        dummy.next = head
+        slow,fast = head,head
+        
+        for _ in range(n):
+            fast = fast.next
+        
+        while fast is not None and fast.next is not None:
+            fast = fast.next
+            slow = slow.next
+        
+        if slow is head:
+            dummy.next = head.next
+        else:
+            slow.next = slow.next.next
+        
+        return dummy.next
+```
+
+这种方法并不好，因为定义的双指针：slow 和 fast 都指向 head，这样面对下面的情况：
+
+[1,2] 1
+[1,2] 2
+
+就都会出现 slow == head 的情况
+
+解决方式就是定义 dummy node，把双指针都指向 dummy：
+
+```Python
+
+class Solution:
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        dummy = ListNode(-1)
+        
+        dummy.next = head
+        slow,fast = dummy,dummy
+        
+        for _ in range(n):
+            fast = fast.next
+        
+        while fast.next is not None:
+            fast = fast.next
+            slow = slow.next
+
+        slow.next = slow.next.next
+        
+        return dummy.next
+
+```
+
