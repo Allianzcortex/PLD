@@ -1,4 +1,34 @@
 
+Problem description:
+
+```
+
+Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+
+ 
+
+Example 1:
+
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+Example 2:
+
+Input: intervals = [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+ 
+
+Constraints:
+
+1 <= intervals.length <= 104
+intervals[i].length == 2
+0 <= starti <= endi <= 104
+
+```
+
+
+
 Similar Problems :
 
 ```
@@ -89,20 +119,42 @@ class Solution {
 
 Python Solution :
 
+sort and merge:
+
 ```Python
 
-class Solution(object):
-    def merge(self, intervals):
-        """
-        :type intervals: List[Interval]
-        :rtype: List[Interval]
-        """
-        if len(intervals) == 0: return []
-        intervals = sorted(intervals, key = lambda x: x.start)
-        res = [intervals[0]]
-        for n in intervals[1:]:
-            if n.start <= res[-1].end: res[-1].end = max(n.end, res[-1].end)
-            else: res.append(n)
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        
+        intervals.sort(key=lambda x:(x[0],x[1]))
+        res = []
+        
+        index = 0
+        while index < len(intervals):
+            if not res or res[-1][1]<intervals[index][0]:
+                res.append(intervals[index])
+            else:
+                prev = res.pop()
+                min_ = prev[0]
+                max_ = max(prev[1],intervals[index][1])
+                res.append([min_,max_])
+            index += 1
+            
         return res
+
+```
+
+and based on same idea, there is another way to solve it :
+only 7 lines,update the end
+
+```Python
+def merge(self, intervals):
+    out = []
+    for i in sorted(intervals, key=lambda i: i.start):
+        if out and i.start <= out[-1].end:
+            out[-1].end = max(out[-1].end, i.end)
+        else:
+            out += i,
+    return out
 
 ```
