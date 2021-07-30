@@ -34,12 +34,42 @@ very elegant(from Python's perspective)
 
 
 ```Python
+
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
-        res = [[1]*(i+1) for i in range(numRows)]
-        for i in range(numRows):
-            for j in range(1,i):
-                res[i][j] = res[i-1][j-1] + res[i-1][j]
+        res = []
+        
+        for level in range(numRows):
+            res.append([1]*(level+1))
+            for i in range(1,level):
+                # 2,1 1,0 1,1
+                res[level][i] = res[level-1][i-1] + res[level-1][i]
+        
         return res
+
+```
+
+while this is the simulation way , easier to understand :
+
+```Python
+
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        res = [[1]]
+        
+        for _ in range(1,numRows):
+            prev = res[-1]
+            temp = [prev[0]]
+            
+            for index in range(0,len(prev)-1):
+                temp.append(prev[index]+prev[index+1])
+            
+            temp.append(prev[-1])
+            
+            res.append(temp)
+        
+        return res
+                
+        
 
 ```
