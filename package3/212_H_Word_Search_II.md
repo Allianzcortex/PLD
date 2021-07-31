@@ -1,3 +1,105 @@
+
+Problem Description:
+
+```
+
+Given an m x n board of characters and a list of strings words, return all words on the board.
+
+Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+
+ 
+
+Example 1:
+
+
+Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
+Output: ["eat","oath"]
+Example 2:
+
+
+Input: board = [["a","b"],["c","d"]], words = ["abcb"]
+Output: []
+ 
+```
+
+Idea :
+
+这道题就是 Trie 与 DFS 结合。
+关键注意几点：
+
+1. 注意 temp 什么时候 + board[i][j]
+2. 注意是 `board[i][j] not in root.children`\
+
+以下是 Python 解法：
+
+```Python
+
+
+class TrieNode(object):
+    def __init__(self,val):
+        self.val = val
+        self.children = {}
+        self.isEnd = False
+        
+
+class Trie(object):
+    
+    def __init__(self):
+        
+        self.root = TrieNode(-1)
+    
+    def add_word(self,word):
+        cur = self.root
+        for ch in word:
+            if ch not in cur.children:
+                cur.children[ch] = TrieNode(ch)
+            
+            cur = cur.children[ch]
+        
+        cur.isEnd = True
+        
+
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        
+        trie = Trie()
+        for word in words:
+            trie.add_word(word)
+        
+        row,column = len(board),len(board[0])
+        res = []
+        
+        for i in range(row):
+            for j in range(column):
+                self.check(board,i,j,trie.root,"",res)
+        
+        return res
+    
+    def check(self,board,i,j,root,temp,res):
+        if i<0 or i>len(board)-1 or j<0 or j>(len(board[0])-1):
+            return
+        if board[i][j] == '.':
+            return
+        if board[i][j] not in root.children:
+            return
+        
+        ch = board[i][j]
+        root = root.children[ch]
+        temp += ch
+        
+        if root.isEnd:
+            res.append(temp)
+            root.isEnd = False
+        
+        for x,y in [(0,1),(0,-1),(-1,0),(1,0)]:
+
+            board[i][j] = '.'
+            self.check(board,i+x,j+y,root,temp,res)
+            board[i][j] = ch
+        
+```
+---
+
 This problem will combine `DFS` + `Trie` together.
 
 for cases like :
