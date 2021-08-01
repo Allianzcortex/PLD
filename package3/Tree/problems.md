@@ -77,4 +77,8 @@
 563:E: Binary Tree Tilt
 
 814:M: Binary Tree Pruning
+
+101:E: Symmetric Tree
+
+236:M: Lowest Common Ancestor of a Binary Tree
 ```
