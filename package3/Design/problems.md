@@ -10,4 +10,6 @@
 341:M: Flatten Nested List Iterator
 
 380:M: Insert Delete GetRandom O(1)
+
+384:M: Shuffle an Array
 ```
