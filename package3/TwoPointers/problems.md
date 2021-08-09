@@ -36,4 +36,6 @@
 
 240:M: Search a 2D Matrix II
 74:M:  Search a 2D Matrix
+
+27:E: Remove Element
 ```
