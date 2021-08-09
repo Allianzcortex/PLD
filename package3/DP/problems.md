@@ -36,4 +36,8 @@
 139:M: Word Break
 
 91:M: Decode Ways
+
+238:M: Product Array Except Self
+
+132:H: Palindrome Partitioning II
 ```
