@@ -40,4 +40,5 @@
 238:M: Product Array Except Self
 
 132:H: Palindrome Partitioning II
+131:M: Palindrome Partitioning
 ```
