@@ -79,3 +79,55 @@ class Solution:
         return True
 
 ```
+
+对应的 Golang 解法如下：
+
+```Go
+
+import "sort"
+
+func canReorderDoubled(arr []int) bool {
+    
+    sort.Ints(arr)
+    
+    count:=make(map[int]int)
+    
+    // build the map
+    for _,x:=range arr {
+        count[x] += 1
+    }
+    
+    // traverse through the slice
+    
+    for _,x := range arr {
+        
+        if (count[x] == 0 ){
+            continue
+        }
+        
+        var target int
+        
+        if (x >0 ) {
+            target = x*2
+        } else {
+            target = x/2
+            if x%2 != 0 {
+                return false
+            }
+        }
+        
+        if(count[target]<=0) {
+            return false
+        }
+        
+        count[target]-=1
+        count[x]-=1
+        
+    }
+    
+    return true
+
+}
+
+
+```
