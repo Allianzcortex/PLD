@@ -37,6 +37,14 @@ board and word consists of only lowercase and uppercase English letters.
 
 ```
 
+Idea : 这就是一个很经典的 DFS
+
+自己下面的 Java 解法用一个 `used[][]` 数组来存储该元素之前是否被访问，其实不用这么麻烦，
+直接置换成 `.` 或 `*` 然后结束后再改回来就可以
+
+
+Java 解法如下：
+
 ```Java
 class Solution {
     
@@ -76,7 +84,9 @@ class Solution {
 
 ```
 
-Basic idea : this is a very classic DFS solution,  I do it easily in Python here :
+Basic idea : this is a very classic DFS solution,  I do it easily in Python here
+
+Python 解法如下：
 
 ```Python
 
@@ -110,5 +120,58 @@ class Solution:
             is_visited[i][j] = False
         
         return check_result
+
+```
+
+---
+
+Golang 解法如下：
+
+```Go
+
+var directions = [][]int{{0,1},{0,-1},{-1,0},{1,0}}
+
+func exist(board [][]byte, word string) bool {
+    
+    if board==nil || board[0]==nil {
+        return false
+    }
+    
+    for i:=range(board) {
+        for j:=range(board[0]) {
+            if traverse(board,word,i,j,0) {
+                return true
+            }
+        }
+    }
+    
+    return false
+}
+
+
+func traverse(board [][]byte, word string,i,j,index int) bool {
+    if (i<0 || i>len(board)-1 || j<0 || j>len(board[0])-1 ) {
+        return false
+    }
+    
+    if (board[i][j] != word[index] || board[i][j]=='.'){
+        return false
+    }
+    
+    if index == len(word)-1 {
+        return true
+    }
+    
+    board[i][j] = '.'
+
+    for _,dire := range directions {
+        if traverse(board,word,i+dire[0],j+dire[1],index+1) {
+            return true
+        }
+    }
+    board[i][j] = word[index]
+    
+    return false
+}
 
 ```
