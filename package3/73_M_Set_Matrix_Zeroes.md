@@ -97,3 +97,59 @@ class Solution:
                 matrix[i][0] = 0
 
 ```
+
+这种思路对应的 Golang 解法如下：
+
+```Go
+
+func setZeroes(matrix [][]int)  {
+    
+    var isFirstRowZero,isFirstColumnZero bool
+    
+    for i:=0;i<len(matrix);i++ {
+        for j:=0;j<len(matrix[0]);j++ {
+            if matrix[i][j] == 0 {
+                fmt.Println(i)
+                // check whether it's from first row/column
+                if i==0 || j==0 {
+                    if i==0 {
+                        isFirstRowZero = true
+                    }
+                    if j==0 {
+                        isFirstColumnZero = true
+                    }
+                    continue
+                }
+                
+                matrix[i][0] = 0
+                matrix[0][j] = 0
+            }
+        }
+    }
+    
+    fmt.Println(matrix)
+    
+    // begin to set value
+    for i:=1;i<len(matrix);i++ {
+        for j:=1;j<len(matrix[0]);j++ {
+            if matrix[i][0]==0 || matrix[0][j]==0 {
+                matrix[i][j] = 0
+            }
+        }
+    }
+    
+    // check first row/column again
+    if isFirstRowZero {
+        for i:=0;i<len(matrix[0]);i++ {
+            matrix[0][i] = 0
+        }
+    }
+    
+    if isFirstColumnZero {
+        for i:=0;i<len(matrix);i++ {
+            matrix[i][0] = 0
+        }
+    }
+}
+
+```
