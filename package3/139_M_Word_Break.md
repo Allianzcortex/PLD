@@ -36,7 +36,7 @@ All the strings of wordDict are unique.
 
 ```
 
-Basic Idea : this is a DP solution 
+Basic Idea : 经典的 DP 解法
 
 we let dp[i] represent : for array[0:i], whether it can be segmented into other parts:
 
@@ -64,5 +64,33 @@ class Solution:
                     break
 
         return dp[-1]
+
+```
+
+---
+
+对应的 Golang 解法如下：
+
+```Golang
+
+func wordBreak(s string, wordDict []string) bool {
+    
+    dp:=make([]bool,len(s)+1)
+    dp[0] = true
+    
+    for i:=1;i<=len(s);i++ {
+        for j:=0;j<len(wordDict);j++ {
+            word := wordDict[j]
+            
+            if (i>=len(word) && dp[i-len(word)] && s[i-len(word):i]==word) {
+                dp[i] = true
+                break
+            }
+        }
+    }
+    
+    return dp[len(s)]
+}
+
 
 ```
