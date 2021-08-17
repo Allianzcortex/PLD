@@ -85,4 +85,5 @@
 
 297:H: Serialize and Deserialize Binary Tree
 
+1448:M: Count Good Nodes in Binary
 ```
