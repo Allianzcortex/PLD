@@ -53,24 +53,19 @@ workds although a little rustic :
 class Solution:
     def numDecodings(self, s: str) -> int:
         
-        # 不能再典型的 DP 题
-        """
-        dp[i] from the first character to ith character,how many ways do we have
+        if not s:
+            return 0
         
-        dp[i] = dp[j]*(1 if s[i] is between [1-9] else 0) + dp[j-2] (for j=i-1, if s[j..i] is between f)
+        dp = [1]+[0]*len(s)
+        if s[0]!='0':
+            dp[1] = 1
         
-        """
-        
-        dp =[1]*2 + [0]*len(s)
-        
-        for index,ch in enumerate(s):
+        for i in range(1,len(s)):
+            if 1<=int(s[i])<=9:
+                dp[i+1]+=(dp[i])
             
-            flag1 = 1<=int(ch)<=9
-            dp[index+2] += dp[index+1]*int(flag1)
-            
-            twoDigits = s[index-1:index+1] if index>=1 else "0"
-            flag2 = (not s.startswith('0') and 10<=int(twoDigits)<=26)
-            dp[index+2] += dp[index]*int(flag2)
+            if 10<=int(s[i-1:i+1])<=26:
+                dp[i+1]+=dp[i-1]
 
         return dp[-1]
 
@@ -97,5 +92,34 @@ class Solution:
             if i != 1 and s[i-2:i] < "27" and s[i-2:i] > "09":  #"01"ways = 0
                 dp[i] += dp[i-2]
         return dp[len(s)]
+
+```
+
+Below is Golang solution :
+
+```Go
+
+import "strconv"
+
+func numDecodings(s string) int {
+    
+    dp:=make([]int,len(s)+1)
+    dp[0] = 1
+    
+    for i:=0;i<len(s);i++ {
+        if (s[i]!='0') {
+            dp[i+1] += dp[i]
+        }
+        
+        if (i>=1) {
+            twoDigits,_:=strconv.Atoi(s[i-1:i+1])
+            if (twoDigits>=1 && twoDigits<=26 && s[i-1]!='0') {
+                dp[i+1]+=dp[i-1]
+            }
+       }
+}
+    
+    return dp[len(s)]
+}
 
 ```
