@@ -16,4 +16,5 @@
 232:E: Implement Queue Using Stacks
 
 402:M: Remove K Digits
+150:M: Evaluate Reverse Polish Notation
 ```
