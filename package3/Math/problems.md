@@ -19,4 +19,6 @@
 423 M Reconstruct Original Digits from English
 
 611 M Valid Triangle Number
+
+233 M Rectangle Area
 ```
