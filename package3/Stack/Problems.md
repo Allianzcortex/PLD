@@ -17,4 +17,6 @@
 
 402:M: Remove K Digits
 150:M: Evaluate Reverse Polish Notation
+
+331:M: Verify Preordre Serialization of a Binary Tree
 ```
