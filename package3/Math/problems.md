@@ -27,4 +27,5 @@
 400 M Nth Digit
 
 264 M Ugly Number II
+263 E Ugly Number
 ```
