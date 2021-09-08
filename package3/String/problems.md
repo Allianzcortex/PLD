@@ -73,4 +73,6 @@
 
 205:E: Isomorphic Strings
 791:M: Custom Strings
+
+848:M: Shifting Letters
 ```
