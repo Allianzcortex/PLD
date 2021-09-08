@@ -41,4 +41,8 @@
 
 132:H: Palindrome Partitioning II
 131:M: Palindrome Partitioning
+
+926:M: Flip String to Monotone Increasing
+
+304:M: Range Sum Query 2D - Immutable
 ```
