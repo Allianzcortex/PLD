@@ -94,4 +94,6 @@
 117:M: Populating Next Right Pointers in Each Node II
 
 129:M: Sum Root to Leaf Numbers
+
+1469:E:Lock: Find All The Lonely Nodes
 ```
