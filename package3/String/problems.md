@@ -75,4 +75,8 @@
 791:M: Custom Strings
 
 848:M: Shifting Letters
+
+224:H: Basic Calculator
+
+2000:E: Reverse Prefix of Word
 ```
