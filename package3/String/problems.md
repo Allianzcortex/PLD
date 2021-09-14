@@ -79,4 +79,6 @@
 224:H: Basic Calculator
 
 2000:E: Reverse Prefix of Word
+
+1189:E: Maximum Number of Balloons
 ```
