@@ -45,4 +45,11 @@
 926:M: Flip String to Monotone Increasing
 
 304:M: Range Sum Query 2D - Immutable
+
+123:H: Best Time to Buy and Sell Stock III
+
+126:H: Word Ladder II
+
+1137:E: N-th Tribonacci Number
+978:E: Longest Turbulent Subarray
 ```
