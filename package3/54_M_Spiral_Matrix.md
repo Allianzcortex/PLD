@@ -23,6 +23,8 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 ```
 
+Basic idea : 就是顺序循环，然后调整好 up/right,top/bottom 的边界
+
 ---
 
 Below is Java Solution :
@@ -120,5 +122,69 @@ class Solution:
                 break
         
         return res
+
+```
+
+对应的 Golang 解法如下：
+
+```Golang
+
+func spiralOrder(matrix [][]int) []int {
+    
+    row,column := len(matrix),len(matrix[0])
+    res := make([]int,row*column)
+    
+    // define the bound
+    top,bottom := 0,row-1
+    left,right := 0,column-1
+    index := 0
+    
+    for {
+        
+        // direction 1 : from left to right
+        for i:=left;i<=right;i++ {
+            res[index] = matrix[top][i]
+            index += 1
+        }
+        top += 1
+        if top > bottom {
+            break;
+        }
+        
+        // direction 2 : from top to down
+        for i:=top;i<=bottom;i++ {
+            res[index] = matrix[i][right]
+            index += 1
+        }
+        right -= 1
+        if right<left {
+            break
+        }
+        
+        // direction 3 : from right to left
+        for i:=right;i>=left;i-- {
+            res[index] = matrix[bottom][i]
+            index += 1
+        }
+        bottom -= 1
+        if bottom < top {
+            break
+        }
+        
+        // direction 4 : from down to bottom
+        for i:=bottom;i>=top;i-- {
+            res[index] = matrix[i][left]
+            index += 1
+        }
+        left += 1
+        if left>right {
+            break
+        }
+        
+    }
+    
+    return res
+    
+}
 
 ```
