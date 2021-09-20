@@ -52,4 +52,6 @@
 
 1137:E: N-th Tribonacci Number
 978:E: Longest Turbulent Subarray
+
+115:H: Distinct Subsequences
 ```
