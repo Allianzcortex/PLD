@@ -21,4 +21,6 @@
 2001 M Number of Pairs of Interchangeable Rectangles
 
 485 E Max Consecutive Ones
+
+1275 E Find Winner on a Tic Tac Toe Game
 ```
