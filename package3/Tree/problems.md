@@ -104,4 +104,6 @@
 513:M: Find Bottom Left Tree Value
 
 515:M: Find Largest Value in Each Tree Row
+
+543:E: Diameter of Binary Tree
 ```
