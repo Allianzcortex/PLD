@@ -81,4 +81,8 @@
 2000:E: Reverse Prefix of Word
 
 1189:E: Maximum Number of Balloons
+
+1328:M: Break a Palindrome
+
+929:E: Unique Email Address
 ```
