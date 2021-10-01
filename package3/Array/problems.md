@@ -25,4 +25,6 @@
 1275 E Find Winner on a Tic Tac Toe Game
 
 922 E Sort Array By Parity II
+
+2016 E Maximum Difference Between Increasing Elements
 ```
