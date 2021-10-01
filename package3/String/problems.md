@@ -85,4 +85,6 @@
 1328:M: Break a Palindrome
 
 929:E: Unique Email Address
+
+1790:E: Check if One String Swap Can Make Strings Equal
 ```
