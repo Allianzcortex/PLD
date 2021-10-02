@@ -30,5 +30,7 @@
 
 2017 M Grid Game
 
-2011 E Final Value of Variable After Performing Operations
+2011 E Final Value of Variable After Performing Operations'
+
+2012 M Sum of Beauty in the Array
 ```
