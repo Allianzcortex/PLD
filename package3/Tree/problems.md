@@ -113,4 +113,6 @@
 
 987:H: Vertical Order Traversal of a Binary Tree
 
+687:M: Longest Univalue Path
+
 ```
