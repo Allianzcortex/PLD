@@ -1,4 +1,6 @@
 
+Binary Search:
+
 ```
 33:M: Search in Rotated Sorted Array
 26:E: Remove Duplicates from Sorted Array
@@ -42,4 +44,18 @@
 704:E: Binary Search
 
 162:M: Find Peak Element
+```
+
+
+---
+
+
+Two Pointers:
+
+
+```
+
+986:M: Interval List Intersections
+
+
 ```
