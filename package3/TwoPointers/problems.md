@@ -38,4 +38,6 @@
 74:M:  Search a 2D Matrix
 
 27:E: Remove Element
+
+704:E: Binary Search
 ```
