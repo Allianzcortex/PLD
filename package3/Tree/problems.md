@@ -115,4 +115,8 @@
 
 687:M: Longest Univalue Path
 
+508:M: Most Frequent Subtree Sum
+
+1325:M: Delete Leaves With a Given Value
+
 ```
