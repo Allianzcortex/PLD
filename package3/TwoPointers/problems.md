@@ -40,4 +40,6 @@
 27:E: Remove Element
 
 704:E: Binary Search
+
+162:M: Find Peak Element
 ```
