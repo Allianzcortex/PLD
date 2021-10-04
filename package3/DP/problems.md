@@ -54,4 +54,6 @@
 978:E: Longest Turbulent Subarray
 
 115:H: Distinct Subsequences
+
+1218:M: Longest Arithmetic Subsequence of Given Difference
 ```
