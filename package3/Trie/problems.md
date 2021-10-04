@@ -7,4 +7,6 @@
 745: H: Prefix and Suffix Search
 
 648:M: Replace Words
+
+677:M: Map Sum Pairs
 ```
