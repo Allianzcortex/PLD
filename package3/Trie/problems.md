@@ -11,4 +11,6 @@
 677:M: Map Sum Pairs
 
 720:M: Longest Word in Dictionary
+
+676:M: Implement Magic Dictionary
 ```
