@@ -9,4 +9,6 @@
 648:M: Replace Words
 
 677:M: Map Sum Pairs
+
+720:M: Longest Word in Dictionary
 ```
