@@ -35,4 +35,6 @@
 2012 M Sum of Beauty in the Array
 
 2022 E Convert 1D Array Into 2D Array
+
+2023 M Number of Pairs of Strings With Concatenation Equal to Target
 ```
