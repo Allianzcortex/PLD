@@ -89,4 +89,6 @@
 1790:E: Check if One String Swap Can Make Strings Equal
 
 1573:M: Number of Ways to Split a String
+
+2027:E: Minimum Moves to Convert String
 ```
