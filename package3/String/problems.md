@@ -87,4 +87,6 @@
 929:E: Unique Email Address
 
 1790:E: Check if One String Swap Can Make Strings Equal
+
+1573:M: Number of Ways to Split a String
 ```
