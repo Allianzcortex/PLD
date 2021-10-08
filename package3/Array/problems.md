@@ -41,4 +41,6 @@
 442 M Find All Duplicated in an Array
 
 206 E Count Number of Pairs With Absolute Difference K
+
+1984 E Minimum Difference Between Highest and Lowest of K Scores
 ```
