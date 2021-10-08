@@ -39,4 +39,6 @@
 2023 M Number of Pairs of Strings With Concatenation Equal to Target
 
 442 M Find All Duplicated in an Array
+
+206 E Count Number of Pairs With Absolute Difference K
 ```
