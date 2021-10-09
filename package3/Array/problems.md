@@ -47,4 +47,6 @@
 1979 E Find Greatest Common Divisor of Array
 
 219 E Contains Duplicate II
+
+414 E Third Maximum Number
 ```
