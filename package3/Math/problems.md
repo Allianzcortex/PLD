@@ -35,4 +35,6 @@
 592 M Fraction Addition and Subtraction
 
 292 E Nim Game
+
+492 E Construct the Rectangle
 ```
