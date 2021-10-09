@@ -6,4 +6,5 @@
 
 136 E Single Number
 
+342 E Power of Four
 ```
