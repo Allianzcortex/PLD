@@ -59,4 +59,6 @@
 561 E Array Partition I
 
 566 E Reshapce the Matrix
+
+575 E Distribute Candies
 ```
