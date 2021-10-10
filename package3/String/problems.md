@@ -93,4 +93,6 @@
 2027:E: Minimum Moves to Convert String
 
 1974:E: Minimum Time to Type Word Using Special Typewriter
+
+434:E: Number of Segments in a String
 ```
