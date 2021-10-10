@@ -57,4 +57,6 @@
 506 E Relative Ranks
 
 561 E Array Partition I
+
+566 E Reshapce the Matrix
 ```
