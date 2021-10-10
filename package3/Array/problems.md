@@ -53,4 +53,6 @@
 448 E Find All NUmbers Disappeared an Array
 
 482 E License Key Formatting
+
+506 E Relative Ranks
 ```
