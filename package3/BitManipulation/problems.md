@@ -9,4 +9,7 @@
 342 E Power of Four
 
 461 E Hamming Distance
+
+693 E Binary Number with Alternating Bits
+
 ```
