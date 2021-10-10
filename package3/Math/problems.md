@@ -39,4 +39,6 @@
 492 E Construct the Rectangle
 
 504 E Base 7
+
+507 E Perfect Number
 ```
