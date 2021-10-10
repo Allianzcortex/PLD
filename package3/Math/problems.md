@@ -37,4 +37,6 @@
 292 E Nim Game
 
 492 E Construct the Rectangle
+
+504 E Base 7
 ```
