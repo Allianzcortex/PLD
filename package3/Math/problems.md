@@ -41,4 +41,6 @@
 504 E Base 7
 
 507 E Perfect Number
+
+441 E Arranging Coins
 ```
