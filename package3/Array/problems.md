@@ -61,4 +61,6 @@
 566 E Reshapce the Matrix
 
 575 E Distribute Candies
+
+500 E Keyboard Row
 ```
