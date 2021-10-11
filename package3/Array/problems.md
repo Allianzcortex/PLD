@@ -75,4 +75,6 @@
 628 E Maximum Product of Three Numbers
 
 832 E Flipping an Image
+
+867 E Transpose Matrix
 ```
