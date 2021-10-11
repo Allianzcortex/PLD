@@ -12,4 +12,6 @@
 380:M: Insert Delete GetRandom O(1)
 
 384:M: Shuffle an Array
+
+705:E: Design HashSet
 ```
