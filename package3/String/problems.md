@@ -103,4 +103,6 @@
 771:E: Jewels and Stones
 
 717:E: 1-bit and 2-bit Characters
+
+804:E: Unique Morse Code Words
 ```
