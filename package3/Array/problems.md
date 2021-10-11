@@ -71,4 +71,6 @@
 661 E Image Smoother
 
 766 E Toeplitz Matrix
+
+628 E Maximum Product of Three Numbers
 ```
