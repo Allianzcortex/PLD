@@ -53,3 +53,11 @@ class Solution:
         return max(max_1,max_2)
 
 ```
+
+另外一种方法也是同样的思路，但不需要排序：
+
+`positive max, second max, third max, and negative min, negative second min`
+
+一遍循环就行：
+
+#### TODO 后续再做
