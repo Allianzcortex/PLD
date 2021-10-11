@@ -65,4 +65,8 @@
 500 E Keyboard Row
 
 724 E Find Pivot Index
+
+748 E Shortest Completing Word
+
+661 E Image Smoother
 ```
