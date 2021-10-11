@@ -69,3 +69,15 @@ class Solution:
         return len([bit for bit in bits if isPrime(bit.count('1')) ])
 
 ```
+
+当然也有另外一种方法是一位内 `In the constraints it says that L and R are at most 1,000,000, so the numbers can be at most 20 bits.`，所以可以直接比较：
+
+```Python
+
+class Solution:
+    def countPrimeSetBits(self, L, R):
+
+        primes = {2, 3, 5, 7, 11, 13, 17, 19}
+        return sum(map(lambda x: bin(x).count('1') in primes, range(L, R+1)))
+
+```

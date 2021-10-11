@@ -69,4 +69,6 @@
 748 E Shortest Completing Word
 
 661 E Image Smoother
+
+766 E Toeplitz Matrix
 ```
