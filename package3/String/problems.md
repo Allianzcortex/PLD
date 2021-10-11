@@ -105,4 +105,6 @@
 717:E: 1-bit and 2-bit Characters
 
 804:E: Unique Morse Code Words
+
+806:E: Number of Lines to Write String
 ```
