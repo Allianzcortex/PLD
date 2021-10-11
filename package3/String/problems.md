@@ -95,4 +95,6 @@
 1974:E: Minimum Time to Type Word Using Special Typewriter
 
 434:E: Number of Segments in a String
+
+728:E: Self Dividing Numbers
 ```
