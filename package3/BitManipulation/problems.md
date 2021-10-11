@@ -12,4 +12,5 @@
 
 693 E Binary Number with Alternating Bits
 
+762 E Prime Number of Set Bits in Binary Representation
 ```
