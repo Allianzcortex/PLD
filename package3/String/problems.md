@@ -99,4 +99,6 @@
 728:E: Self Dividing Numbers
 
 657:E: Robot Return to Origin
+
+771:E: Jewels and Stones
 ```
