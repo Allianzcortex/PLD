@@ -77,4 +77,6 @@
 832 E Flipping an Image
 
 867 E Transpose Matrix
+
+896 E Monotonic Array
 ```
