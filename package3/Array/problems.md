@@ -78,5 +78,7 @@
 
 867 E Transpose Matrix
 
+892 E Surface Area of 3D Shapes
+
 896 E Monotonic Array
 ```
