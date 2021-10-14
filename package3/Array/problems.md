@@ -78,6 +78,8 @@
 
 867 E Transpose Matrix
 
+888 E Fair Candy Swap
+
 892 E Surface Area of 3D Shapes
 
 896 E Monotonic Array
