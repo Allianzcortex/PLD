@@ -89,4 +89,6 @@
 942 E DI String Match
 
 953 E Verifying an Alien Dictionary
+
+961 E N-Repeated Element in Size 2N Array
 ```
