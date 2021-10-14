@@ -110,5 +110,9 @@
 
 819:E: Most Common Word
 
-821:E: Shortest Distance 
+821:E: Shortest Distance
+
+896:E: Monotonic Array
+
+884:E: Uncommon Words from Two Sentences
 ```
