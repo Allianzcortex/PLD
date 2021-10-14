@@ -63,3 +63,19 @@ class Solution:
                 return [val,val-gap]
 
 ```
+
+当然也可以排序后用 two pointer 来做，类似这种
+
+```Python
+    i,j=0,0
+
+    while i<len(A) and j<len(B):
+                temp = A[i]-B[j]
+                if temp == diff:
+                    return [A[i],B[j]]
+                elif temp<diff:
+                    i+=1
+                else:
+                    j+=1
+
+```

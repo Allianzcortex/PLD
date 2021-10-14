@@ -43,4 +43,8 @@
 507 E Perfect Number
 
 441 E Arranging Coins
+
+860 E Lemonade Change
+
+914 E X of a Kind in a Deck of Cards
 ```
