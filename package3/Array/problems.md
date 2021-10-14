@@ -85,4 +85,6 @@
 896 E Monotonic Array
 
 941 E Valid Mountain Array
+
+942 E DI String Match
 ```
