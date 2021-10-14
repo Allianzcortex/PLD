@@ -87,4 +87,6 @@
 941 E Valid Mountain Array
 
 942 E DI String Match
+
+953 E Verifying an Alien Dictionary
 ```
