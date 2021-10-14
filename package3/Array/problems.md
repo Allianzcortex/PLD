@@ -83,4 +83,6 @@
 892 E Surface Area of 3D Shapes
 
 896 E Monotonic Array
+
+941 E Valid Mountain Array
 ```
