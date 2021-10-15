@@ -91,4 +91,6 @@
 953 E Verifying an Alien Dictionary
 
 961 E N-Repeated Element in Size 2N Array
+
+989 E Add to Array-Form of Integer
 ```
