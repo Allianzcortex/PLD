@@ -27,7 +27,22 @@ Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 
 
 ```
 
-基本思路：对每一个 Node,讨论遍历所有的情况
+基本思路：对每一个 Node,它的路径有 4 种情况：
+
+1. root.val
+2. root.val + leftVal
+3. root.val + rightVal
+4. root.val + leftVal + rightVal
+
+找出 `max()` value 然后对全局变量进行更新
+
+在计算完它的 path 后，那么以它为基的 path 有 3 种：
+
+1. root.val
+2. root.val + leftVal
+3. root.val + rightVal
+
+我们返回 `max()` 中这三个的最大值
 
 Solutions :
 
