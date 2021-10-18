@@ -19,6 +19,10 @@ Input: root = [1,2,2,null,3,null,3]
 Output: false
 ```
 
+Basic idea:
+
+直接递归比较。比较 left.left 和 right.right，再比较 left.right 和 right.left
+
 Python solution :
 
 Firstly it's most intuitive solution : using dfs solution 
