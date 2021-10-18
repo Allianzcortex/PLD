@@ -26,7 +26,7 @@ Output: []
 
 ```
 
-Idea : 就是非常直观的解决方法，DFS，如果遇到
+Basic idea : 就是非常直观的解决方法，DFS，如果遇到
 sum == target 并且这个子节点是叶子结点的话就返回结果：
 
 ```Python
