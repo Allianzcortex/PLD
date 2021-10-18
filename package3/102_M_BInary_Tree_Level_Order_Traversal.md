@@ -30,6 +30,10 @@ The number of nodes in the tree is in the range [0, 2000].
 -1000 <= Node.val <= 1000
 ```
 
+Basic idea:
+
+这道题的思路已经很直观了
+
 So obviously there can be 2 solutions : recursive and iterative
 
 For recursive solution 
