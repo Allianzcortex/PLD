@@ -103,3 +103,36 @@ check the link : https://leetcode.com/problems/house-robber-iii/discuss/79330/St
 ```
 
 TODO : add a more effective answer later and add Python solution
+
+这里加一个用 Python 的 memcache 解法：
+
+```Python
+
+class Solution:
+    def rob(self, root: Optional[TreeNode]) -> int:
+        
+        cache = {}
+        return self.dfs(root,cache)
+    
+    def dfs(self,root,cache):
+        if root is None:
+            return 0
+        
+        if root in cache:
+            return cache[root]
+        
+        sum_1 = root.val
+        if root.left:
+            sum_1 += (self.dfs(root.left.left,cache)+self.dfs(root.left.right,cache))
+        
+        if root.right:
+            sum_1 += (self.dfs(root.right.left,cache)+self.dfs(root.right.right,cache))
+        
+        sum_2 = self.dfs(root.left,cache) + self.dfs(root.right,cache)
+        
+        cache[root] = max(sum_1,sum_2)
+        return cache[root]
+            
+```
+
+但还不是最正统的 DP tho...
