@@ -25,27 +25,45 @@ All the numbers of nums are unique.
 
 ```
 
----
+Basic idea: 这道题有两种解法来做
 
-My Solution , the most intuitive、recursive one :
+第一种是 DFS，把每一次生成的元素都加进来
 
 ```Python
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]: 
+    def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
-        self.solve(nums,res,[],-1)
-        return res
         
+        self.dfs(nums,res,[],0)
+        
+        return res
     
-    def solve(self,nums,res,temp,index):
-        if index>len(nums)-1:
+    def dfs(self,nums,res,path,index):
+        if index > len(nums):
             return
-        res.append(temp[::])
-        for i in range(index+1,len(nums)):
-            temp.append(nums[i])
-            self.solve(nums,res,temp,i)
-            temp.pop()
+        
+        res.append(path[:])
+        for i in range(index,len(nums)):
+            path.append(nums[i])
+            self.dfs(nums,res,path,i+1)
+            path.pop()
 
 ```
 
-TODO : need to check other languages and other kinds of solutions(e.g. iterative)
+第二种是 BFS，依次迭代：
+
+```Python
+
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res = [[]]
+        
+        for num in nums:
+            temp = []
+            for prefix in res:
+                temp.append(prefix+[num])
+            res += temp
+        
+        return res
+
+```
