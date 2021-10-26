@@ -32,9 +32,56 @@ Constraints:
 
 ```
 
+Basic idea:
+
 The tricky part for this problem is that there are 
 lots of corner cases,like `-+1` and we need to avoid
 `integer overflow` issue.
+
+Python 实现如下：
+
+```Python
+
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        
+        res = 0
+        sign = 1
+        
+        index = 0
+        
+        s = s.lstrip()
+        if s=="":
+            return 0
+        
+        if s[index] == "-":
+            sign = -1
+            index += 1
+        elif s[index] == '+':
+            index += 1
+        
+        while index <len(s):
+            ch = s[index]
+            
+            if not ch.isdigit():
+                break
+            else:
+                res = res*10 + int(ch)
+                index += 1
+        
+        res = res*sign 
+
+        if res<(-2)**31:
+            return (-2)**31
+        
+        if res>2**31-1:
+            return 2**31-1
+        
+        return res
+
+```
+
+```
 
 Below is Java Solution :
 
@@ -87,55 +134,3 @@ class Solution {
 }
 
 ```
-
----
-
-Next is Python Solution :
-
-```Python
-
-class Solution:
-    def myAtoi(self, s: str) -> int:
-        
-        res = 0
-        sign = 1
-        
-        index = 0
-        
-#         while index < len(s) and s[index]==" ":
-#             index += 1
-        
-#         if index>=len(s):
-#             return res  # handle empty character ""
-        
-        s = s.lstrip()
-        if s=="":
-            return 0
-        
-        if s[index] == "-":
-            sign = -1
-            index += 1
-        elif s[index] == '+':
-            index += 1
-        
-        while index <len(s):
-            ch = s[index]
-            
-            if not ch.isdigit():
-                break
-            else:
-                res = res*10 + int(ch)
-                index += 1
-        
-        res = res*sign 
-
-        if res<(-2)**31:
-            return (-2)**31
-        
-        if res>2**31-1:
-            return 2**31-1
-        
-        return res
-
-```
-
