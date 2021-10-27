@@ -33,4 +33,6 @@
 25:H: Reverse Nodes in K Group
 
 86:M: Partition List
+
+1721:M: Swapping Nodes in a Linked List
 ```
