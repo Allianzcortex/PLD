@@ -44,6 +44,8 @@ Binary Search:
 704:E: Binary Search
 
 162:M: Find Peak Element
+
+981:M: Time Based Key-Value Store
 ```
 
 
@@ -60,4 +62,6 @@ Two Pointers:
 977:E: Squares of a Sorted Array
 
 830:E: Position of Large Groups
+
+888 E Fair Candy Swap
 ```
