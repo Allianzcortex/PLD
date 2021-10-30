@@ -14,3 +14,6 @@
 
 676:M: Implement Magic Dictionary
 ```
+
+对于 `Trie` 的 template，实现如下：
+
