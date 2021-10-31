@@ -95,4 +95,6 @@
 989 E Add to Array-Form of Integer
 
 768 H Max Chunks To Make Sorted II
+
+769 M Max Chunks To Make Sorted 
 ```
