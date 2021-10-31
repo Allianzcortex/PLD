@@ -35,4 +35,6 @@
 86:M: Partition List
 
 1721:M: Swapping Nodes in a Linked List
+
+2058:M: Find the Minimum and Maximum Number of Nodes Between Critical Points
 ```
