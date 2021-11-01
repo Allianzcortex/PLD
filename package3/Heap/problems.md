@@ -8,4 +8,6 @@
 451:M: Sort Characters By Frequency
 
 767:M: Reorganize String
+
+373:M: Find K Pairs with Smallest Sums
 ```
