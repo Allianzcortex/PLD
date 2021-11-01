@@ -38,17 +38,17 @@ nums is sorted and rotated between 1 and n times.
 
 ```
 
-Solution :
-
-will provide Python solution firstly here :
+Basic idea :
 
 The basic idea is like problem 154,only compare middle with right : 
 
-if nums[middle]>=nums[right] : so at least nums[middle] cannot be the smallest number,
-and we choose to let left = middle + 1
+基本思路如下，如果 num
 
-in other cases, since there is no duplciated number, middle can also have the chance to become
-the smallest number, so we choose to let right = middle
+1. 如果 nums[middle]>nums[right]，就肯定说明 `pivot` 在 `middle->right` 之间。同时
+因为最少有一个数比 nums[middle] 小，所以可以赋值 `left=middle+1`
+
+2. 其他情况下说明最小值就在 `left->middle` 之间，可能是 `nums[middle]` 也可能是其他值，用
+一个 res 来存储每次的最小值。这样就符合标准的二分搜索 template
 
 
 ```
@@ -61,18 +61,21 @@ TIme  Complexity : Classic Binary Search Problem, should be O(log(N))
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
+        
         left,right = 0,len(nums)-1
-        while left < right:
-            if nums[left]<nums[right]:
-                return nums[left]
-            middle = left + (right-left) // 2
+        res = float('inf')
+        
+        while left<=right:
+            middle = left+(right-left)//2
             
-            if nums[middle]>=nums[left]:
+            if nums[middle]>nums[right]:
+                # pivot be in the right part
                 left = middle + 1
             else:
-                right = middle
-        
-        return nums[left]
+                res = min(res,nums[middle])
+                right = middle-1
+
+        return res
 
 ```
 
