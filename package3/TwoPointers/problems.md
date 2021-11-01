@@ -52,6 +52,8 @@ Binary Search:
 852:E: Peak Index in a Mountain Array
 
 875:M: koko Eating Bananas
+
+1011:M: Capacity To Ship Package Within D Days
 ```
 
 
