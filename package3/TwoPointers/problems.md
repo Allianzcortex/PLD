@@ -50,6 +50,8 @@ Binary Search:
 154:H: Find Minimum in Rotated Sorted Array II
 
 852:E: Peak Index in a Mountain Array
+
+875:M: koko Eating Bananas
 ```
 
 
