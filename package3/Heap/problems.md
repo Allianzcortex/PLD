@@ -10,4 +10,5 @@
 767:M: Reorganize String
 
 373:M: Find K Pairs with Smallest Sums
+973:M: K Closest Points to Origin
 ```
