@@ -37,6 +37,44 @@ Similar Problems :
 435 Non-overlapping Intervals
 ```
 
+Basic idea : Python 解法如下
+
+先排序然后再 merge
+
+Python Solution :
+
+sort and merge:
+
+```Python
+
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        
+        intervals.sort(key=lambda x:(x[0],x[1]))
+        res = []
+        
+        index = 0
+        while index < len(intervals):
+            if not res or res[-1][1]<intervals[index][0]:
+                res.append(intervals[index])
+            else:
+                prev = res.pop()
+                min_ = prev[0]
+                max_ = max(prev[1],intervals[index][1])
+                res.append([min_,max_])
+            index += 1
+            
+        return res
+
+```
+
+对应的时间复杂度为：
+
+time complexity: 排序需要 O(nlogn)，迭代整个数组需要 O(n)，加起来为 O(nlogn)+O(n)=O(nlogn)
+
+space complexity: 需要一个数组来保存输出结果，best case 是 O(1)，worst case 是 O(n)，所以平均也是 O(n)，随着
+input 的增加而增加
+
 This is my Solution here :
 
 Sort firstly and then comparing the `[end of first]` and `[start of second]`
@@ -82,8 +120,6 @@ int[] testInterval=new int[]{1,2};
 result.add(testInterval);
 testInterval[0]=10;
 testInterval[1]=11;
-System.out.println(result.get(1)[0]); // 10
-System.out.println(result.get(1)[1]); // 11 Its already changed
 
 ```
 
@@ -117,32 +153,6 @@ class Solution {
 
 ---
 
-Python Solution :
-
-sort and merge:
-
-```Python
-
-class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        
-        intervals.sort(key=lambda x:(x[0],x[1]))
-        res = []
-        
-        index = 0
-        while index < len(intervals):
-            if not res or res[-1][1]<intervals[index][0]:
-                res.append(intervals[index])
-            else:
-                prev = res.pop()
-                min_ = prev[0]
-                max_ = max(prev[1],intervals[index][1])
-                res.append([min_,max_])
-            index += 1
-            
-        return res
-
-```
 
 and based on same idea, there is another way to solve it :
 only 7 lines,update the end
