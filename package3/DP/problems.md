@@ -56,4 +56,16 @@
 115:H: Distinct Subsequences
 
 1218:M: Longest Arithmetic Subsequence of Given Difference
+
+931:M: Minimum Falling Path Sum
+
+309:M: Best Time to Buy and Sell Stock with Cooldown
+
+10:H: Regular Expression Matching
+
+97:M: Interleaving String
+
+416:M: Partition Equal Subset Sum
+
+1567:M: Maximum Length of Subarray With Positive Product
 ```
