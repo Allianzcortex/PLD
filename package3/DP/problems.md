@@ -68,4 +68,8 @@
 416:M: Partition Equal Subset Sum
 
 1567:M: Maximum Length of Subarray With Positive Product
+
+1014:M: Best Sightseeing Pair
+
+413:M: Arithmetic Slices
 ```
