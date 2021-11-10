@@ -101,4 +101,6 @@
 883 E Projection Area of 3D Shapes
 
 997 E Find the Town Judge
+
+999 E Available Captures for Rook
 ```
