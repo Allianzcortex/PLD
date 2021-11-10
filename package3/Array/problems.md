@@ -96,5 +96,7 @@
 
 768 H Max Chunks To Make Sorted II
 
-769 M Max Chunks To Make Sorted 
+769 M Max Chunks To Make Sorted
+
+883 E Projection Area of 3D Shapes
 ```
