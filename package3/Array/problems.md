@@ -103,4 +103,6 @@
 997 E Find the Town Judge
 
 999 E Available Captures for Rook
+
+976 E Largest Perimeter Triangle
 ```
