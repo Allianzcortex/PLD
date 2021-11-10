@@ -104,6 +104,8 @@
 
 717:E: 1-bit and 2-bit Characters
 
+748:E: Shortest Completing Word
+
 804:E: Unique Morse Code Words
 
 806:E: Number of Lines to Write String
@@ -115,4 +117,6 @@
 896:E: Monotonic Array
 
 884:E: Uncommon Words from Two Sentences
+
+1347:M: Minimum Number of Steps to Make Two Strings Anagram
 ```
