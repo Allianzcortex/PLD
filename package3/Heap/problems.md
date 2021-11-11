@@ -11,4 +11,6 @@
 
 373:M: Find K Pairs with Smallest Sums
 973:M: K Closest Points to Origin
+
+1005:E: Maximize Sum of Array After K Negations
 ```
