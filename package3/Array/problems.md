@@ -105,4 +105,6 @@
 999 E Available Captures for Rook
 
 976 E Largest Perimeter Triangle
+
+1413 E Minimum Value to Get Positive Step by Step Sum
 ```
