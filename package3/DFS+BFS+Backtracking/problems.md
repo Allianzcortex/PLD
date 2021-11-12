@@ -55,4 +55,6 @@
 733:E: Flood Fill
 
 994:M: Rotting Oranges
+
+386:M: Lexicographical Numbers
 ```
