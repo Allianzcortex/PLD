@@ -65,6 +65,7 @@ class Solution:
         
         for trip in trips:
             while queue and queue[0][0]<=trip[1]:
+                # 要取得前一个的最小值，用 queue[0]
                 # previous trip endtime <= current trip starttime
                 capacity += heappop(queue)[2]
             
