@@ -119,4 +119,7 @@
 
 1325:M: Delete Leaves With a Given Value
 
+222:M: Count Complete Tree Nodes
+
+285:M:Lock: Inorder Successor in BST
 ```
