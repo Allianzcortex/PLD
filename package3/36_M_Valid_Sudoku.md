@@ -1,4 +1,62 @@
 
+Problem description:
+
+```
+
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+Each row must contain the digits 1-9 without repetition.
+Each column must contain the digits 1-9 without repetition.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Note:
+
+A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+Only the filled cells need to be validated according to the mentioned rules.
+ 
+
+Example 1:
+
+
+Input: board = 
+[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: true
+Example 2:
+
+Input: board = 
+[["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: false
+Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
+ 
+
+Constraints:
+
+board.length == 9
+board[i].length == 9
+board[i][j] is a digit 1-9 or '.'.
+
+```
+
+Basic idea:
+
+下面第一种解法是最好的解法，关键就是 blcok 里的 `x/y` 生成方法
+面试里很难直接想到吧
+
 ```Java
 
 class Solution {
@@ -36,7 +94,40 @@ class Solution {
 }
 ```
 
-The drawbacks of 1st solution is :
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        
+        for i in range(9):
+            rows = set()
+            columns = set()
+            block = set()
+            
+            for j in range(9):
+                
+                # check row
+                if board[i][j]!='.' and board[i][j] in rows:
+                    return False
+                rows.add(board[i][j])
+                
+                # check column
+                if board[j][i]!='.' and board[j][i] in columns:
+                    return False
+                columns.add(board[j][i])
+                
+                # check block
+                x = 3*(i//3)+j//3
+                y = 3*(i%3)+j%3
+                if board[x][y]!='.' and board[x][y] in block:
+                    return False
+                block.add(board[x][y])
+        
+        return True
+
+```
 
 So the 2nd solution looks pretty nice and easier to come up
 in an interview: key will be to find a unique identifier for 
