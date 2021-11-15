@@ -74,4 +74,6 @@ Two Pointers:
 830:E: Position of Large Groups
 
 888 E Fair Candy Swap
+
+374 E Guess Number Higher or Lower
 ```
