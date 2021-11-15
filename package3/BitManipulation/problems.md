@@ -15,4 +15,6 @@
 762 E Prime Number of Set Bits in Binary Representation
 
 868 E Binary Gap
+
+371 M Sum of Two Integers
 ```
