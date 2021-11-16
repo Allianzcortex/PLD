@@ -115,4 +115,6 @@
 388 M Longest Absolute File Path
 
 581 M Shortest Unsorted Continuous Subarray
+
+945 M Minimum Increment to Make Array Unique
 ```
