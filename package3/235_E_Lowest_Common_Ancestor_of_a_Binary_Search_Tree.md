@@ -34,6 +34,30 @@ They are different.
 
 For 235,we use the attribute of BST : 
 
+时间复杂度：O(H) = O(longN) 因为这是一个 BST
+空间复杂度：O(H)
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if not root:
+            return None
+        
+        if root.val<p.val and root.val<q.val:
+            return self.lowestCommonAncestor(root.right,p,q)
+        
+        if root.val>p.val and root.val>q.val:
+            return self.lowestCommonAncestor(root.left,p,q)
+        
+        return root
+
+```
+
+Java 解法如下：
+
 ```Java
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
