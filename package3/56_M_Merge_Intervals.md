@@ -110,61 +110,37 @@ class Solution {
 
 ```
 
----
+更新一下 Java 的解法，其中 Java 的解法更巧妙，用两个变量 `start & end` 
+来存储端点值，只有在需要的时候再更新：
 
-This is another solution , it works because LinkedList add the memory :
+Java 解法如下：
 
 ```Java
 
-int[] testInterval=new int[]{1,2};
-result.add(testInterval);
-testInterval[0]=10;
-testInterval[1]=11;
-
-```
-
-```java
-
 class Solution {
-	public int[][] merge(int[][] intervals) {
-		if (intervals.length <= 1)
-			return intervals;
-
-		// Sort by ascending starting point
-		Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
-
-		List<int[]> result = new ArrayList<>();
-		int[] newInterval = intervals[0];
-		result.add(newInterval);
-		for (int[] interval : intervals) {
-			if (interval[0] <= newInterval[1]) // Overlapping intervals, move the end if needed
-				newInterval[1] = Math.max(newInterval[1], interval[1]);
-			else {                             // Disjoint intervals, add the new interval to the list
-				newInterval = interval;
-				result.add(newInterval);
-			}
-		}
+    public int[][] merge(int[][] intervals) {
+        Arrays.sort(intervals,(i1,i2)->(i1[0]-i2[0]));
         
-		return result.toArray(new int[result.size()][]);
-	}
+        List<int[]> res = new ArrayList<>();
+        int start = intervals[0][0];
+        int end = intervals[0][1];
+        
+        for(int[] interval:intervals) {
+            
+            if(interval[0]<=end) {
+                end = Math.max(end,interval[1]);
+            } else {
+                res.add(new int[]{start,end});
+                start = interval[0];
+                end = interval[1];
+            }
+        }
+        
+        res.add(new int[]{start,end});
+        
+        return res.toArray(new int[0][0]);
+        
+    }
 }
-
-```
-
----
-
-
-and based on same idea, there is another way to solve it :
-only 7 lines,update the end
-
-```Python
-def merge(self, intervals):
-    out = []
-    for i in sorted(intervals, key=lambda i: i.start):
-        if out and i.start <= out[-1].end:
-            out[-1].end = max(out[-1].end, i.end)
-        else:
-            out += i,
-    return out
 
 ```

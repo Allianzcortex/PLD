@@ -21,28 +21,48 @@ Output: [-1]
 Solution : Use `HashMap` to store the pivot index.
 
 ```Java
-
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if(preorder==null || inorder==null || preorder.length!=inorder.length)
+        if (preorder==null || preorder.length==0) {
             return null;
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int i=0;i<inorder.length;i++)
-            map.put(inorder[i],i);
-        return traverse(preorder,0,preorder.length-1,inorder,0,inorder.length-1,map);
+        }
+        
+        Map<Integer,Integer> orders = new HashMap<>();
+        for(int i=0;i<preorder.length;i++) {
+            orders.put(inorder[i],i);
+        }
+        
+        return buildTreeNode(preorder,orders,0,preorder.length-1,0,inorder.length-1);
     }
     
-    public TreeNode traverse(int[] preorder,int preLeft,int preRight,int[] inorder,int inLeft,int inRight,Map<Integer,Integer> map) {
-        if(preLeft>preRight || inLeft>inRight)
+    private TreeNode buildTreeNode(int[] preorder,Map<Integer,Integer> orders,int preLeft,int preRight,int inLeft,int inRight) {
+        if(preLeft>preRight) {
             return null;
-        int index=map.get(preorder[preLeft]);
-        TreeNode root=new TreeNode(preorder[preLeft]);
-        root.left = traverse(preorder,preLeft+1,preLeft+(index-inLeft),inorder,inLeft,index-1,map);
-        root.right = traverse(preorder,preLeft+(index-inLeft+1),preRight,inorder,index+1,inRight,map);
+        }
+        if(preLeft==preRight) {
+            return new TreeNode(preorder[preLeft]);
+        }
+        
+        // firstly, we find the 1st number of preorder
+        int rootVal = preorder[preLeft];
+        int rootIndex = orders.get(rootVal);
+        int leftLength = rootIndex-inLeft;
+        // 这里关键是得到要分割的左半边的长度，然后就以此来计算出：
+        // a. 对树的左半边 root.left 来说：
+        // a.1 对 preorder，边界是 [preLeft+1, preLeft+leftLength]
+        // b. 对树的右半边 root.right 来说：
+        // b.1 对 preorder，边界是 [preLeft+leftLength+1,preRight]
+        // 而对 Inorder 部分，它则主要和 rootIndex 有关
+        // a.2 对 root.left 的 inorder, 边界是 [inLeft,rootIndex-1]
+        // b.2 对 root.right 的 inorder，边界是 [rootIndex+1,inRight]
+
+        TreeNode root = new TreeNode(rootVal);
+        root.left = buildTreeNode(preorder,orders,preLeft+1,preLeft+leftLength,inLeft,rootIndex-1);
+        root.right = buildTreeNode(preorder,orders,preLeft+leftLength+1,preRight,rootIndex+1,inRight);
+        
         return root;
     }
 }
-
 
 ```
 

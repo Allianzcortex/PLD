@@ -118,3 +118,53 @@ class Solution:
         
 
 ```
+
+对应的 Java DFS 解法如下：
+
+```Java
+
+class Solution {
+    public void solve(char[][] board) {
+        
+        int row = board.length;
+        int column = board[0].length;
+        
+        for(int i=0;i<row;i++) {
+            dfs(board,i,0);
+            dfs(board,i,column-1);
+        }
+        
+        for(int j=0;j<column;j++) {
+            dfs(board,0,j);
+            dfs(board,row-1,j);
+        }
+        
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<column;j++) {
+                if(board[i][j]=='O') {
+                    board[i][j]='X';
+                }else if(board[i][j]=='C') {
+                    board[i][j]='O';
+                }
+            }
+        }
+    }
+    
+    private void dfs(char[][] board,int i,int j) {
+        if(i<0 || i>board.length-1 || j<0 || j>board[0].length-1) {
+            return;
+        }
+        if(board[i][j]!='O') {
+            return;
+        }
+        
+        board[i][j]='C';
+        int[][] direcs ={{0,1},{0,-1},{-1,0},{1,0}};
+        
+        for(int k=0;k<4;k++) {
+            dfs(board,i+direcs[k][0],j+direcs[k][1]);
+        }
+    }
+}
+
+```
