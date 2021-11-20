@@ -56,6 +56,8 @@ Binary Search:
 1011:M: Capacity To Ship Package Within D Days
 
 378:M: Kth Smallest Element in a Sorted Matrix
+
+540:M: Single Element in a Sorted Array
 ```
 
 
