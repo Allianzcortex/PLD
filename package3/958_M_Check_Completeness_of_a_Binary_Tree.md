@@ -64,3 +64,42 @@ class Solution:
         return True
 
 ```
+
+对应的 Java 代码如下：
+
+```Java
+
+
+class Solution {
+    public boolean isCompleteTree(TreeNode root) {
+        
+        // Basic idea is that :
+        // If we can meet a non-nulll node after we meet the first null node
+        // it means it's invalid
+        
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        boolean hasMeetNull = false;
+        TreeNode curr;
+        
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            for(int i=0;i<size;i++) {
+                curr = queue.poll(); 
+                if(curr==null) {
+                    hasMeetNull = true;
+                } else {
+                    if(hasMeetNull) {
+                        return false;
+                    }
+                    queue.add(curr.left);
+                    queue.add(curr.right);
+                }
+            }
+        }
+        
+        return true;
+    }
+}
+
+```
