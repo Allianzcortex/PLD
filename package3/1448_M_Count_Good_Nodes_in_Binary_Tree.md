@@ -66,6 +66,35 @@ class Solution:
 
 ```
 
+Java 解法如下：
+
+```Java
+
+
+class Solution {
+    public int goodNodes(TreeNode root) {
+        
+        return traverse(root,root.val);
+    }
+    
+    public int traverse(TreeNode root,int maxValue) {
+        if(root==null) {
+            return 0;
+        }
+        
+        int res = 0;
+        if(root.val>=maxValue)
+            res += 1;
+        
+        res += traverse(root.left,Math.max(maxValue,root.val));
+        res += traverse(root.right,Math.max(maxValue,root.val));
+        
+        return res;
+    }
+}
+
+```
+
 ---
 
 Golang Solution: 用一个 `math.MinInt64` 来避免重复判断 `root==nil`
