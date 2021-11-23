@@ -37,6 +37,10 @@ Therefore, sum = 495 + 491 + 40 = 1026.
 
 Basic idea : 根据 logic 来一步步解
 
+这道题一样有两种解法，递归和回溯：
+
+下面是回溯解法
+
 ```Python
 
 class Solution(object):
@@ -55,3 +59,43 @@ class Solution(object):
                     stack.append((node.left, value*10+node.left.val))
         return res
 ```
+
+如下则是递归解法：
+
+```Python
+
+class Solution:
+    def sumNumbers(self, root: Optional[TreeNode]) -> int:
+        res = []
+        
+        self.dfs(root,res,0)
+        
+        return sum(res)
+    
+    def dfs(self,root,res,curr_val):
+        
+        if not root:
+            return
+        
+        new_val = curr_val*10+root.val
+        
+        if root.left is None and root.right is None:
+            res.append(new_val)
+            return
+        
+        self.dfs(root.left,res,new_val)
+        self.dfs(root.right,res,new_val)
+
+```
+
+时空复杂度分析如下：
+
+1. 时间：每个节点都要 visit 一次，所以假设有 N 个节点，那么时间复杂度为 O(N)
+
+2. 空间：空间复杂度与时间复杂度有关。每个 level 遍历时间复杂度都是 O(1) 
+
+如果这个 tree 是 balanced，那么会有 O(logN) level，空间复杂度为 O(logN)
+如果这个 tree 是 skewed ，那么会有 O(N) level，空间复杂度为 O(N)
+
+---
+

@@ -86,8 +86,7 @@ l1 = headB if l1.next is None else l1.next
 [1,5]
 ```
 
-那么第二种情况就会陷入死循环，而第一种情况会在 None is None 的情况下
-结束。
+那么第二种情况就会陷入死循环，而第一种情况会在 None is None 的情况下结束。
 
 
 ```java

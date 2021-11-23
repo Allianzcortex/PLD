@@ -97,7 +97,6 @@ class Solution:
         
         self.dfs(root.right)
         root.val = self.prefix = self.prefix + root.val
-        self.prefix = root.val
         self.dfs(root.left)
 
 ```

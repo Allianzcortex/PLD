@@ -12,4 +12,7 @@
 76:H: Minimum Window Substring
 
 1004:M: Max Consecutive Ones III
+
+159:Longest Substring with At Most Two Distinct Characters
+340:Longest Substring with At Most K Distinct Characters
 ```

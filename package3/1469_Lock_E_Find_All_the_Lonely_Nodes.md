@@ -107,3 +107,39 @@ class Solution {
 }
 
 ```
+
+这道题还是挺简单的...就是只要 left == None 或 right == None
+有一个满足就行
+
+Copy 一下 Python 解法：
+
+```Python
+
+class Solution:
+    def getLonelyNodes(self, root: TreeNode) -> List[int]:        
+        self.results = []
+        
+        self.helper(root)
+        
+        return self.results
+    
+    def helper(self, root):
+        if not root:
+            return
+        
+        if not root.left and not root.right:
+            return
+        
+        if not root.left:
+            self.results.append(root.right.val)
+            self.helper(root.right)
+
+        elif not root.right:
+            self.results.append(root.left.val)            
+            self.helper(root.left)
+        
+        else:
+            self.helper(root.left)
+            self.helper(root.right)
+
+```

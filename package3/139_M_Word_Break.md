@@ -38,6 +38,8 @@ All the strings of wordDict are unique.
 
 Basic Idea : 经典的 DP 解法
 
+我们让 dp[i] 表示对 s[0..i]，
+
 we let dp[i] represent : for array[0:i], whether it can be segmented into other parts:
 
 Here are two solutions for it :

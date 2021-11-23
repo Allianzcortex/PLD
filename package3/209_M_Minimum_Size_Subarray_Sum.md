@@ -32,9 +32,9 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 
 ```
 
-Idea :
+Basic idea :
 
-This is the most classic sliding window solution :
+这道题也是滑动窗口：
 
 ```Python
 

@@ -72,4 +72,6 @@
 1014:M: Best Sightseeing Pair
 
 413:M: Arithmetic Slices
+
+221:M: Maximal Square
 ```

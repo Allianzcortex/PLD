@@ -44,6 +44,8 @@ In this question, we represent the board using a 2D array. In principle, the boa
 
 ```
 
+Basic idea:
+
 Solution, with Python:
 
 The key here is: when a cell from live->die, it should be mark as dead finally , but should be mark

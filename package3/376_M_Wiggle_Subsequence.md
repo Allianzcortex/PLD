@@ -46,7 +46,7 @@ class Solution:
         count = 1
         
         for i in range(1,len(nums)):
-            diff = nums[i]-nums[i-1]
+            diff = nums[i]-nums[i-1]w
             if (diff>0 and prev_diff<=0) or (diff<0 and prev_diff>=0):
                 count += 1
                 prev_diff = diff

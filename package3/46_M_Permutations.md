@@ -39,7 +39,7 @@ Java Solution , it should be pretty simple overall.
 ```Java
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<>();
         List<Integer> path = new ArrayList<Integer>();
         dfs(res,path,nums);
         return res;

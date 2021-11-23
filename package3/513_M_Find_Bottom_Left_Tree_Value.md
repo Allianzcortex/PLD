@@ -110,5 +110,4 @@ class Solution:
         self.dfs(root.left,level+1)
         self.dfs(root.right,level+1)
 
-
 ```

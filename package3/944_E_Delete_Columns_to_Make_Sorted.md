@@ -98,6 +98,6 @@ class Solution:
                 if strs[j][i]<strs[j-1][i]:
                     cnt += 1
                     break
-        return cnt        
+        return cnt
 
 ```

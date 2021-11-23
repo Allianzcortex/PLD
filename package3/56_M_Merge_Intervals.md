@@ -138,6 +138,7 @@ class Solution {
         
         res.add(new int[]{start,end});
         
+        // 注意这里的把 List<int[]> 转换为 int[][] 非常巧妙
         return res.toArray(new int[0][0]);
         
     }

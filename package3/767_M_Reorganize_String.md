@@ -30,6 +30,8 @@ s consists of lowercase English letters.
 
 Python 代码如下：
 
+还有对时空复杂度的分析，O(nlogk)?
+
 ```Python
 
 from heapq import heappush,heappop

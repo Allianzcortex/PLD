@@ -133,7 +133,6 @@ public class Codec {
                 list.add(current.right);
             }
         }
-        System.out.println(res.toString());
         return res.toString().trim();
         
     }

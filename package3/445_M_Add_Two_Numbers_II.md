@@ -52,6 +52,7 @@ class Solution {
 ```
 
 And if we are not allowed to reverse the LinkedList,then the solution will become
+这时候就应该用 stack<> 读取出 value 然后再新建 linkedlist
 
 ```Java
 

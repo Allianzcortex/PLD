@@ -1,5 +1,5 @@
 
-The item in the arryay must be >=0 
+The item in the array must be >=0 
 
 ```Java
 

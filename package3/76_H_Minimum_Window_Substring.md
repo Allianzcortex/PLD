@@ -38,8 +38,9 @@ s and t consist of uppercase and lowercase English letters.
 Follow up: Could you find an algorithm that runs in O(m + n) time?
 
 ```
+Basic idea:
 
-This is the slidding window solution :
+这是很经典的滑动窗口题目
 
 #### a pretty clean link:
 https://leetcode.com/problems/minimum-window-substring/discuss/226911/Python-two-pointer-sliding-window-with-explanation
@@ -60,12 +61,10 @@ class Solution:
         for right in range(len(s)):
 
             if t_counter[s[right]]>0:
-            # if s[right] in t_counter:
                 total -= 1            
             t_counter[s[right]]-=1
             
             while total==0:
-                # print(f"left {left} right {right}")
                 if min_str=="" or (right-left+1 < len(min_str)):
                     min_str = s[left:right+1]
                 t_counter[s[left]] += 1

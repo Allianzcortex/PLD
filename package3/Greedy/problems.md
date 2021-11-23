@@ -17,4 +17,6 @@
 954:M: Array of Doubled Pairs
 
 941:E: DI String Match
+
+944:E: Delete Columns to Make Sorted
 ```
