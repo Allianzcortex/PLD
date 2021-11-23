@@ -58,6 +58,8 @@ Binary Search:
 378:M: Kth Smallest Element in a Sorted Matrix
 
 540:M: Single Element in a Sorted Array
+
+2080:M: Range Frequency Queries
 ```
 
 
