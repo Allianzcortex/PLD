@@ -119,4 +119,6 @@
 945 M Minimum Increment to Make Array Unique
 
 68 H Text Justification
+
+2078 E Two Furthest Houses With Different Colors
 ```

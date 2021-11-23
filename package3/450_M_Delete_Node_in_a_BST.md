@@ -85,3 +85,34 @@ class Solution {
     }
 
 ```
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        
+        if not root:
+            return None
+
+        if root.val<key:
+            root.right = self.deleteNode(root.right,key)
+        elif root.val>key:
+            root.left = self.deleteNode(root.left,key)
+        else:
+            if not root.left:
+                return root.right
+            if not root.right:
+                return root.left
+            
+            smallest_right = root.right
+            while smallest_right.left:
+                smallest_right = smallest_right.left
+            
+            smallest_right.left = root.left
+            return root.right
+        
+        return root
+
+```
