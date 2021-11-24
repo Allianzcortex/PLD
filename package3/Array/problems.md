@@ -121,4 +121,6 @@
 68 H Text Justification
 
 2078 E Two Furthest Houses With Different Colors
+
+2073 E Time Needed to Buy Tickets
 ```
