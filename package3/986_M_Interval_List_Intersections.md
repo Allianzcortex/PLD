@@ -11,7 +11,7 @@ A closed interval [a, b] (with a <= b) denotes the set of real numbers x with a 
 
 The intersection of two closed intervals is a set of real numbers that are either empty or represented as a closed interval. For example, the intersection of [1, 3] and [2, 4] is [2, 3].
 
- 
+
 
 Example 1:
 
@@ -107,3 +107,48 @@ class Solution {
 
 ```
 
+Golang 代码如下：
+
+```Golang
+
+func intervalIntersection(firstList [][]int, secondList [][]int) [][]int {
+    
+    res := make([][]int,0)
+    i,j := 0,0
+    
+    for i<len(firstList) && j<len(secondList) {
+        maxLeft := max(firstList[i][0],secondList[j][0])
+        minRight := min(firstList[i][1],secondList[j][1])
+        
+        if maxLeft<=minRight {
+            res = append(res,[]int{maxLeft,minRight});
+        }
+        
+        if(firstList[i][1]<secondList[j][1]) {
+            i+=1;
+        } else {
+            j+=1;
+        }
+    }
+    
+    return res;
+    
+}
+
+func max(a,b int) int {
+    if(a>b) {
+        return a;
+    }
+    
+    return b;
+}
+
+func min(a,b int) int {
+    if(a<b) {
+        return a;
+    }
+    
+    return b;
+}
+
+```
