@@ -74,4 +74,6 @@
 413:M: Arithmetic Slices
 
 221:M: Maximal Square
+
+714:M: Best Time to Buy and Sell Stock with Transaction Fee
 ```
