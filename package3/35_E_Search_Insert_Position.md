@@ -60,8 +60,32 @@ class Solution {
             }
         }
         return left;
-        // return nums[left]<target?left+1:left;
     }
+}
+
+```
+
+Golang 解法如下：
+
+```Golang
+
+func searchInsert(nums []int, target int) int {
+    
+    left,right := 0,len(nums)-1
+    
+    for left<=right {
+        middle := left + (right-left)/2
+        
+        if(nums[middle]==target) {
+            return middle;
+        } else if(nums[middle]<target) {
+            left = middle + 1;
+        } else {
+            right = middle -1;
+        }
+    }
+        
+        return left;
 }
 
 ```
