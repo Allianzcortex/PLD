@@ -123,4 +123,6 @@
 2078 E Two Furthest Houses With Different Colors
 
 2073 E Time Needed to Buy Tickets
+
+1002 E Find Common Characters
 ```
