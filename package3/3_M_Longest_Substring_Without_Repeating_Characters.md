@@ -4,8 +4,6 @@ Problem description:
 ```
 Given a string s, find the length of the longest substring without repeating characters.
 
- 
-
 Example 1:
 
 Input: s = "abcabcbb"
@@ -41,7 +39,8 @@ Basic idea:
 
 第一种实现，用一个 `map` 来纪录上一个 `ch` 出现的 index，如果上一次
 出现的在 `start` 的右边，那么就意味着需要重新计算 `start`，否则的话
-就每次更新 `maxLength`。
+就每次更新 `maxLength`。这种实现很容易忘记一些细节，不推荐，还是推荐
+更直观的第二种方法
 
 ```Python
 
@@ -66,60 +65,59 @@ class Solution:
 下面是 sliding window 的第二种实现，用一个 map 来存储
 
 ```Python
+
 class Solution:
+
     def lengthOfLongestSubstring(self, s: str) -> int:
-        left = 0
+        counter = Counter()
+        left,right = 0,0
         res = 0
-        counter = defaultdict(lambda:0)
         
-        for right in range(len(s)):
+        while right<len(s):
             right_ch = s[right]
-            while counter[right_ch] != 0:
-                counter[s[left]]-= 1
+            while (counter[right_ch]!=0):
+                counter[s[left]] -= 1
                 left += 1
             
-            counter[right_ch]+=1
+            counter[right_ch] += 1
             res = max(res,right-left+1)
-        
-        return res
-```
-
-```
-
-The key is to consider this line : 
-
-` j = Math.max(j,map.get(ch)+1);` 
-
-an example case is : `abbac`. 
-if we use `j=map.get(ch)+1` : 
-we iterate over the string:
-a -> j=0
-b -> j=0
-b -> j=2
-a -> j=1 -> This is not what we want. We want it to be 3.
-
-It means if we want to skip the middle duplicated items, then we 
-need to use `j = Math.max(j,map.get(ch)+1)`
-
-```Java
-
-class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        Map<Character,Integer> map = new HashMap<>();
-        int j = 0,maxLength=0;
-        for(int i=0;i<s.length();i++) {
-            char ch = s.charAt(i);
-            if(map.containsKey(ch)) {
-                j = Math.max(j,map.get(ch)+1);
-            }
+            right += 1
             
-            map.put(ch,i);
-            maxLength = Math.max(maxLength,i-j+1);
+        return res
+
+```
+
+
+对这种解法的 Golang 实现如下：
+
+```Golang
+
+func lengthOfLongestSubstring(s string) int {
+    
+    m:=make(map[byte]int)
+    res := 0
+    
+    
+    for left,right:=0,0;right<len(s);right++ {
+        
+        for m[s[right]]>0 {
+            m[s[left]]-=1
+            left += 1
         }
         
-        return maxLength;
+        m[s[right]] += 1
+        res = max(res,right-left+1)
     }
+    
+    return res
+}
+
+func max(a,b int) int {
+    if(a>b) {
+        return a
+    }
+    
+    return b
 }
 
 ```
-
