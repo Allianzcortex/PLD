@@ -17,4 +17,5 @@
 340:Longest Substring with At Most K Distinct Characters
 
 1052:M: Grumpy Bookstore Owner
+567:M: Permutation in String
 ```
