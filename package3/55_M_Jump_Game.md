@@ -118,3 +118,55 @@ class Solution:
         return dp[-1]
 
 ```
+
+Golang 的 DP 解法如下：
+
+```Golang
+
+func canJump(nums []int) bool {
+    
+    visited := make([]bool,len(nums))
+    visited[0] = true
+    
+    for i:=1;i<len(nums);i++ {
+        for j:=i-1;j>=0;j-- {
+            if(visited[j] && nums[j]>=i-j) {
+                visited[i] = true
+                break
+            }
+        }
+    }
+    
+    return visited[len(nums)-1]
+    
+}
+
+```
+
+Golang 贪心解法如下，时间复杂度为 O(N):
+
+```Golang
+
+func canJump(nums []int) bool {
+    
+    maxReach := 0
+    
+    for i:=0;i<=maxReach;i++ {
+        if(maxReach>=len(nums)-1) {
+            return true
+        }
+        
+        maxReach = max(maxReach,i+nums[i])
+    }
+    
+    return false
+}
+
+func max(a,b int) int {
+    if(a>b) {
+        return a
+    }
+    
+    return b
+}
+```
