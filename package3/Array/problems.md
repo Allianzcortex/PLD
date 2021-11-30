@@ -125,4 +125,8 @@
 2073 E Time Needed to Buy Tickets
 
 1002 E Find Common Characters
+
+1018 E Binary Prefix Divisible By 5
+
+419 M Battleships in a Board
 ```
