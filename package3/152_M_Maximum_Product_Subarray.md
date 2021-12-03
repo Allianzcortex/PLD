@@ -29,6 +29,10 @@ Idea : 基本思路
 因为要考虑 + / - 数，前面的最小值 * 负数 就是最大值，前面的最大值 * 正数 就是最大值
 所以用两个数组来分别存储最大最小值
 
+同时在比较的时候加上 `nums[i]` 是为了考虑当 `nums[i]` 为 0 时的情况，比如 `[0,2]`
+
+当然在空间复杂度上不用保存一整个 array，只用 2 个变量存储 prev_max 和 prev_min 就好了
+
 Python Solution :
 
 
@@ -51,6 +55,50 @@ class Solution:
             min_value[i] = min(val1,val2,nums[i])
         
         return res
+
+```
+
+下面是 Golang 解法：
+
+```Golang
+
+func maxProduct(nums []int) int {
+    
+    length:=len(nums)
+    
+    prevMax,prevMin,res:= nums[0],nums[0],nums[0]
+    
+    for i:=1;i<length;i++ {
+        
+        val1:=prevMax*nums[i]
+        val2:=prevMin*nums[i]
+        
+        prevMax = max(max(val1,val2),nums[i])
+        prevMin = min(min(val1,val2),nums[i])
+        
+        if(prevMax>res) {
+            res = prevMax
+        }
+    }
+    
+    return res
+}
+
+func max(a,b int) int {
+    if(a>b) {
+        return a
+    }
+    
+    return b
+}
+
+func min(a,b int) int {
+    if(a<b) {
+        return a
+    }
+    
+    return b
+}
 
 ```
 
