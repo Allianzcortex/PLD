@@ -129,4 +129,6 @@
 1018 E Binary Prefix Divisible By 5
 
 419 M Battleships in a Board
+
+1217 E Minimum Cost to Move Chips to The Same Position
 ```
