@@ -59,4 +59,9 @@
 386:M: Lexicographical Numbers
 
 1286:M: Iterator for Combination
+
+310:M: Minimum Height Trees
+
+1306:M: Jump Game III
+
 ```
