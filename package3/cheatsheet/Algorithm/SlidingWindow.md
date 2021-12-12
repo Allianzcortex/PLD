@@ -19,3 +19,6 @@ def findSubArray(nums):
     return res
 
 ```
+
+滑动窗口经典题目如下：
+

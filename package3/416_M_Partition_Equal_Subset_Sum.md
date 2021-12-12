@@ -72,3 +72,47 @@ class Solution:
         return dp[-1][-1]
 
 ```
+
+Golang 代码如下：
+
+```Golang
+
+func canPartition(nums []int) bool {
+    
+    sum:=0
+    
+    for _,val := range nums {
+        sum += val
+    }
+    
+    if sum%2!=0 {
+        return false
+    }
+    
+    target := sum/2
+    length := len(nums)
+    
+    // initialize array
+    dp:=make([][]bool,length+1)
+    for i:=0;i<=length;i++ {
+        dp[i] = make([]bool,target+1)
+    }
+    
+    for i:=0;i<=length;i++ {
+        dp[i][0] = true
+    }
+    
+    for i:=1;i<=length;i++ {
+        for j:=1;j<=target;j++ {
+            dp[i][j] = dp[i-1][j]
+            
+            if(nums[i-1]<=j) {
+                dp[i][j] = dp[i][j] || dp[i-1][j-nums[i-1]]
+            }
+        }
+    }
+    
+    return dp[length][target]
+}
+
+```
