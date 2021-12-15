@@ -53,8 +53,6 @@ Golang 解法如下：
 
 ```Golang
 
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import (

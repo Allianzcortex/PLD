@@ -32,6 +32,10 @@ Constraints:
 
 ```
 
+Basic idea:
+
+这道题求解的是最长递增子序列，
+
 The first one is DP solution which is very easy to understand but 
 time complexity can be up to O(N^2)
 

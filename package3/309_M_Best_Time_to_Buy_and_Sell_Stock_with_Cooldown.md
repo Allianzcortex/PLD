@@ -34,19 +34,22 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/disc
 
 基本思路是这样的：
 
-1. 用 `buy[i]` 来表示: ith 天可能是 buy 结尾(如 cooldown cooldown buy)，ith 天可能是 cooldown 结尾
-（buy cooldown)时的最大利润
+1. 用 `buy[i]` 来表示: 从 0..i 天中，最近一次 action 是 buy 时的最大利润
+ith 天可能是 buy 结尾(如 cooldown cooldown buy)，ith 天可能是 cooldown 结尾
+（如 buy cooldown)
 
 如果这一天 cooldown，那么 buy[i]=buy[i-1]；如果这一天是 buy，那么 buy[i]=sell[i-2]-prices[i](因为 cooldown 需要休息一天，所以是 sell[i-2] 而不是 sell[i-1])
 
-2. 用 `sell[i]` 来表示：ith 天可能是 sell 结尾(如 buy sell)，ith 天可能是 cooldown 结尾(如 buy sell cooldown)时的最大利润
+2. 用 `sell[i]` 来表示：从 0..i 天中，最近一次 action 是 sell 时的最大利润
+
+ith 天可能是 sell 结尾(如 buy sell)，ith 天可能是 cooldown 结尾(如 buy sell cooldown)
 
 如果这一天 cooldown，那么 sell[i]=sell[i-1]；如果这一天是 sell，那么 sell[i]=buy[i-1]+prices[i](卖
 产品得到的利润)
 
 综合一下代码如下所示：
 
-这道题还是没那么容易懂，要多做几次。
+和有 transaction fee 的那道题做法是一样的
 
 ```Python
 

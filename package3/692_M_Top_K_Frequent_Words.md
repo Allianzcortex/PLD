@@ -27,4 +27,32 @@ Absolutely it can be solved with bucket sort,will do it later.
 
 ---
 
-Java Solution
+Python 解法如下：
+
+```Python
+
+class Word:
+    
+    def __init__(self,freq,word):
+        self.freq = freq
+        self.word = word
+    
+    def __lt__(self,other):
+        if self.freq == other.freq:
+            return self.word<other.word
+        
+        return self.freq > other.freq
+
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        queue = [Word(freq,word) for (word,freq) in Counter(words).most_common()]
+        
+        heapify(queue)
+        res = []
+        
+        for _ in range(k):
+            res.append(heappop(queue).word)
+        
+        return res
+
+```

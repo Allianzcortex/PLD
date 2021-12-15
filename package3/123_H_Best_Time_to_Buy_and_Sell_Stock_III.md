@@ -35,7 +35,9 @@ Output: 0
 
 ```
 
-Basic idea : 这是一道典型的 DP 解法
+Basic idea : 最多只允许交易股票 2 次
+
+这是一道典型的 DP 解法
 
 ### TODO need to understand more
 
@@ -60,9 +62,6 @@ class Solution:
             for j in range(1,len(prices)):
                 min_val = min(min_val,prices[j]-dp[i-1][j-1])
                 dp[i][j] = max(dp[i][j-1],prices[j]-min_val)
-        # for i in range(len(dp)):
-        #     for j in range(len(dp[0])):
-        #         print(f"{dp[i][j] }",end="")
-        #     print()
+
         return dp[2][len(prices)-1]
 ```

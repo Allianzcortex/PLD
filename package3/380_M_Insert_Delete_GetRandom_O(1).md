@@ -64,6 +64,9 @@ d) 更新 map，map[last_val] = index
 
 最后统一 set.pop()
 
+这道题最后经常还会接着一个 followup : 381
+也肯定是要看的
+
 
 Python Solution :
 
@@ -121,3 +124,54 @@ class RandomizedSet:
 
 ```
 
+Java 解法如下：
+
+```Java
+
+class RandomizedSet {
+
+    private List<Integer> set;
+    private Map<Integer,Integer> indexes;
+    Random rand = new Random();
+    
+    public RandomizedSet() {
+        set = new ArrayList<Integer>();
+        indexes = new HashMap<>();
+    }
+    
+    public boolean insert(int val) {
+        if(indexes.containsKey(val)) {
+            return false;
+        }
+        
+        set.add(val);
+        indexes.put(val,set.size()-1);
+        return true;
+        
+    }
+    
+    public boolean remove(int val) {
+        
+        if(!indexes.containsKey(val)) {
+            return false;
+        }
+        
+        int index = indexes.get(val);
+        if(index<set.size()-1) {
+            int lastVal = set.get(set.size()-1);
+            set.set(index,lastVal);
+            indexes.put(lastVal,index);
+        }
+        // Java 里没有像 Python 的 map.pop() 方法
+        // 所以要 remove val
+        indexes.remove(val);
+        set.remove(set.size()-1);
+        return true;
+    }
+    
+    public int getRandom() {
+        return set.get(rand.nextInt(set.size()));
+    }
+}
+
+```

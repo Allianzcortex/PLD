@@ -775,3 +775,15 @@ if __name__=='__main__':
 
    返回所有 query 为 [2] 时的结果
    这道题会有几万个 operation 所以对时间复杂度要求很高
+
+---
+
+已经完成 OA 部分，下面就是 VO 要复习：
+
+目前来看会考很多关于分布式系统和 DB Lock Level 的内容，这部分的八股文要多多复习。
+
+DB 的 read/write lock，分布式系统的 strong consistency etc.
+
+在 system design 部分，自己的目标是这周就把所有可能的问题都复习一遍，重点放在：
+cash app && ticket master(以及 airline reservation system) 上。
+
