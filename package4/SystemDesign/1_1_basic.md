@@ -92,7 +92,7 @@ b. 可以处理单个更大的 unit : handle larger units of work
 
 一致性的几种情况：
 
-根据 CAP 理论，一致性定义为：`Every read receives the most recent write or an error.`
+根据 CAP 理论 theorem，一致性定义为：`Every read receives the most recent write or an error.`
 
 1. 弱一致性 weak consistency
 
@@ -111,6 +111,18 @@ b. 可以处理单个更大的 unit : handle larger units of work
 数据被同步传输 Data is replicated synchronously
 
 应用于 文件系统(eg HDFS)/数据库(RDBMS)/
+
+---
+
+可用性的几种情况：
+
+1. fail-over  2. replication
+
+1. Fail-over
+
+
+
+
 
 ---
 

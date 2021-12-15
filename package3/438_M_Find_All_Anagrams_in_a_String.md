@@ -36,7 +36,6 @@ Basic idea:
 
 这道题一看就是 sliding window 的典型应用
 
-xu
 
 Python 解法如下：
 
@@ -79,19 +78,3 @@ class Solution {
 }
 
 ```
-
----
-
-Sliding Window Solution
-
-```Java
-
-
-```
-
-"""
-cbaebabacd
-abc
-"""
-
-abc 3

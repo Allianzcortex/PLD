@@ -93,3 +93,66 @@ class Solution:
 
 ```
 
+Golang 解法如下：
+
+第一种使用 2 个 Array:
+
+```Golang
+
+func productExceptSelf(nums []int) []int {
+    
+    length := len(nums)
+    left,right := make([]int,length),make([]int,length)
+    
+    for i:=0;i<length;i++ {
+        if(i==0) {
+            left[i]=1;
+        } else {
+            left[i] = left[i-1]*nums[i-1]
+        }
+    }
+    
+    for i:=length-1;i>=0;i-- {
+        if(i==length-1) {
+            right[i]=1;
+        } else {
+            right[i] = right[i+1]*nums[i+1]
+        }
+    }
+    
+    res := make([]int,length)
+    for i:=0;i<length;i++ {
+        res[i] = left[i]*right[i]
+    }
+    
+    return res
+    
+}
+
+```
+
+第二种使用 2 个 constant :
+
+```Golang
+
+func productExceptSelf(nums []int) []int {
+    
+    length := len(nums)
+    res := make([]int,length)
+    
+    for i,prev_left:=0,1;i<length;i++ {
+       res[i] = prev_left
+       prev_left *= nums[i]
+    }
+    
+    for i,prev_right:=length-1,1;i>=0;i-- {
+        res[i]*= prev_right
+        prev_right*=nums[i]
+    }
+    
+    return res
+    
+}
+
+
+```

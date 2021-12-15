@@ -1,4 +1,11 @@
 
+这个链接是 grokking system design 里提供的解法：
+
+https://astikanand.github.io/techblogs/high-level-system-design/design-bookmyshow
+
+但我觉得...这里的 reservation 真是太复杂了，感觉并不需要设计如此
+
+
 与秒杀系统很像
 
 transaction isolation levels
@@ -8,6 +15,21 @@ transaction isolation levels
 2 阶段提交 2-phase commit ?
 
 redo log ? undo log ?
+
+MB / GB 读音
+
+ELK 与 MySQL 的同步问题，解决方法：
+
+1. 用 Logstash 官方提供的方法同步
+
+2. 自定义 Binlog 读取，更新到 ES 中
+
+确保 latency 可以接受
+
+这个是 eventual consistency，所以确实可能会有问题，
+但考虑到吞吐量 throughput, it should be OK.
+
+
 
 
 Firstly of all :
