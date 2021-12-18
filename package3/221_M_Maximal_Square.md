@@ -5,8 +5,6 @@ Problem description:
 
 Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 
- 
-
 Example 1:
 
 
@@ -107,6 +105,44 @@ public class Solution {
         
         return max*max;
     }
+}
+
+```
+
+Golang 解法如下：
+
+```Golang
+
+func maximalSquare(matrix [][]byte) int {
+    
+    row,column := len(matrix),len(matrix[0])
+    dp:=make([][]int,row+1)
+    for i:=0;i<=row;i++ {
+        dp[i] = make([]int,column+1)
+    }
+    
+    res := 0
+    
+    for i:=1;i<=row;i++ {
+        for j:=1;j<=column;j++ {
+            if matrix[i-1][j-1]=='1' {
+                dp[i][j] = min(min(dp[i-1][j],dp[i][j-1]),dp[i-1][j-1])+1
+                if(dp[i][j]>res) {
+                    res = dp[i][j]
+                }
+            }
+        }
+    }
+    
+    return res*res
+}
+
+func min(a,b int) int {
+    if(a<b) {
+        return a
+    }
+    
+    return b
 }
 
 ```

@@ -128,8 +128,8 @@ class Solution:
 
 第二种解法如下：
 
-其中因为 Python 没办法像 Java 一样自定义比较方法，所以无法直接比较节点，只能按照
-`(val,id)` 的方式压入
+其中因为 Python 没办法像 Java 一样自定义比较方法，所以无法直接比较如果 2 个节点的值
+相同，这时候无法比较，就用 `id` 来生成唯一键值对 `(val,id)`
 
 ```Python
 
@@ -160,40 +160,40 @@ class Solution:
 ```Python
 
 class Solution:
-    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         
         if not lists:
             return None
-        
         length = len(lists)
         
-        while length!=1:
-            for i in range(length//2):
-                lists[i] = self._merge_2_lists(lists[i*2],lists[i*2+1])
-            if length%2==1:
-                lists[length//2] = lists[length-1]
-                length = length//2+1
-            else:
-                length = length//2
+        if length==0:
+            return None
+        elif length==1:
+            return lists[0]
+        elif length==2:
+            return self.merge2List(lists[0],lists[1])
         
-        return lists[0]
+        index = length//2
+        return self.merge2List(self.mergeKLists(lists[:index]), self.mergeKLists(lists[index:]))
     
-    def _merge_2_lists(self,head1,head2):
+    
+    def merge2List(self,l1,l2):
         
         dummy = ListNode(-1)
         head = dummy
         
-        while head1 and head2:
-            if head1.val<head2.val:
-                head.next = head1
-                head1 = head1.next
+        while l1 and l2:
+            
+            if l1.val<l2.val:
+                head.next = l1
+                l1 = l1.next
             else:
-                head.next = head2
-                head2 = head2.next
-                
+                head.next = l2
+                l2 = l2.next
+            
             head = head.next
         
-        head.next = head1 or head2
+        head.next = l1 or l2
         return dummy.next
 
 ```
