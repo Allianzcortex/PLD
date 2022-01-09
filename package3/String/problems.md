@@ -119,4 +119,6 @@
 884:E: Uncommon Words from Two Sentences
 
 1347:M: Minimum Number of Steps to Make Two Strings Anagram
+
+2129:E: Capitalize the Title
 ```
