@@ -37,4 +37,6 @@
 1721:M: Swapping Nodes in a Linked List
 
 2058:M: Find the Minimum and Maximum Number of Nodes Between Critical Points
+
+2130:M: Maximum Twin Sum of a Linked List
 ```
