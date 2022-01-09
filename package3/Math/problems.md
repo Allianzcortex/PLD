@@ -49,4 +49,6 @@
 914 E X of a Kind in a Deck of Cards
 
 1041 M Robot Bounded In Circle
+
+382 M Linked List Random Node
 ```
