@@ -1,4 +1,55 @@
 
+
+
+Python Solution:
+
+```Python
+
+# 就先不列了，实在太经典了
+
+```
+
+---
+
+Golang Solution 如下：
+
+```Golang
+
+func permutation(s string) []string {
+
+    // 对 "abc" 来说，
+    // length/cap 设置成 5，就是错误的
+    // length/cap 设置成 6，就是对的
+    // 因为要看 slice 后置 array 是否被改变
+    res:=make([]string,5)
+    used:=make([]bool,len(s))
+
+    dfs(s,used,"",res)
+
+    return res
+}
+
+func dfs(s string,used []bool,path string,res []string) {
+
+    if len(path)==len(s) {
+        res=append(res,path)
+        return
+    }
+
+    for i:=0;i<len(s);i++ {
+        if used[i] {
+            continue
+        }
+
+        used[i] = true
+        dfs(s,used,path+string(s[i]),res)
+        used[i] = false
+    }
+}
+```
+
+
+
 ```Java
 
 class Solution {

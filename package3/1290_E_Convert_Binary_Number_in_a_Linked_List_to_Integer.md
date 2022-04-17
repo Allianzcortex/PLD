@@ -43,3 +43,22 @@ public int getDecimalValue(ListNode head) {
     }
 
 ```
+
+Golang 解法如下：
+
+```Golang
+
+func getDecimalValue(head *ListNode) int {
+    
+    sum:=0
+    
+    for head!=nil {
+        sum = sum*2+head.Val
+        head = head.Next
+    }
+
+    return sum
+
+}
+
+```

@@ -5,4 +5,10 @@
 75  M Sort Colors
 451 M Sort Characters by Frequency
 
+870 M Advantage Shuffle
+
+349 E Intersection of Two Arrays
+350 E Intersection of Two Arrays II
+
+49 M  Group Anagrams
 ```

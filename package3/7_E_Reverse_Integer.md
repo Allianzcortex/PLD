@@ -35,6 +35,5 @@ class Solution:
         
         # or we can use : return res if (res<2**31 and res>-2**31-1) else 0
         return 0 if res>pow(2,31) else res*sign
-        
 
 ```

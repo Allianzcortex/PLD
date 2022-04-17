@@ -21,4 +21,22 @@
 237:E: Delete Node in a Linked List
 817:M: Linked List Components
 725:M: Split Linked List in Parts
+148:M: Sorted List
+147:M: Insertion Sort
+1367:M: Linked List Binary Tree
+707:M: Design Linked List
+138:M: Copy List with Random Pointer
+82:M: Remove Duplicates from Sorted List II
+19:M: Remove Nth Node from End of List
+
+61:M: Rotate List
+25:H: Reverse Nodes in K Group
+
+86:M: Partition List
+
+1721:M: Swapping Nodes in a Linked List
+
+2058:M: Find the Minimum and Maximum Number of Nodes Between Critical Points
+
+2130:M: Maximum Twin Sum of a Linked List
 ```

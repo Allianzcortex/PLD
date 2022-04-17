@@ -26,4 +26,30 @@ class Solution {
 
 ```
 
-TODO : add Python Solution
+Python Solution, very similar idea :
+
+```Python
+
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        """
+        I             1
+        V             5
+        X             10
+        L             50
+        C             100
+        D             500
+        M             1000
+        """
+        
+        vals = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+        nums = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+        res = ""
+        for v,n in zip(vals,nums):
+            res += (num//v)*n
+            num %= v
+        
+        return res
+        
+
+```

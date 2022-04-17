@@ -1,3 +1,47 @@
+
+Problem description:
+
+```
+Given two integers n and k, return all possible combinations of k numbers out of 1 … n.
+
+Example:
+
+Input: n = 4, k = 2
+Output:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+```
+
+Basic idea:
+
+这道题就是典型的不能再典型的一道 DFS 题，使用
+pre-index 作为下一次循环的起始点
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        res=[]
+        self.dfs(n,res,[],k,1)
+        return res
+    
+    def dfs(self,n:int,res,path,k:int,index:int):
+        if(len(path)==k):
+            res.append(path)
+            return
+        for i in range(index,n+1):
+            self.dfs(n,res,path+[i],k,i+1)
+
+```
+
 This is the Java Solution
 
 Very Classic DFS problem
@@ -31,26 +75,5 @@ class Solution {
         }
     }
 }
-
-```
-
----
-
-Same Way with Python,while it will be simpler :
-
-```Python
-
-class Solution:
-    def combine(self, n: int, k: int) -> List[List[int]]:
-        res=[]
-        self.dfs(n,res,[],k,1)
-        return res
-    
-    def dfs(self,n:int,res,path,k:int,index:int):
-        if(len(path)==k):
-            res.append(path)
-            return
-        for i in range(index,n+1):
-            self.dfs(n,res,path+[i],k,i+1)
 
 ```

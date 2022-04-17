@@ -67,7 +67,46 @@ class Solution:
             for j in range(0,row):
                 # // swap matrix[i] and matrix[row-1-i]
                 matrix[j][i],matrix[j][row-1-i] = matrix[j][row-1-i],matrix[j][i]
+```
+
+And Here is another Python implementation, but difference is :
+it swaps row value(top and bottom) based on middle line, and then
+swap value based on diagonal.
+
+In the interivew, any solution will work:
+
+```Python
+
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        swap the value based on diagonal
         
-
-
+        1 2 3     7 8 9    7 4 1
+        4 5 6 ->  4 5 6 -> 8 5 2
+        7 8 9     1 2 3    9 6 3
+        
+        """
+        
+        
+        row = len(matrix)
+        if row == 0:
+            return
+        column = len(matrix[0])
+        
+        up,bottom = 0,row-1
+        
+        # step 1 : swap row value based on middle line
+        while up<bottom:
+            for j in range(column):
+                matrix[up][j],matrix[bottom][j] = matrix[bottom][j],matrix[up][j]
+            up += 1
+            bottom -= 1
+        
+        # step 2 : swap value based on diagonal
+        
+        for i in range(row):
+            for j in range(0,i):
+                matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
 ```

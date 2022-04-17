@@ -1,10 +1,37 @@
 
+Problem Description :
 
-Java Solution :
+```
+Given the head of a linked list, return the list after sorting it in ascending order.
 
-Apparently there are many solutions 
+Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
 
-MergeSort is only one of them : 
+ 
+
+Example 1:
+
+
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
+Example 2:
+
+
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+Example 3:
+
+Input: head = []
+Output: []
+ 
+
+```
+
+这道题直接用归并排序。
+
+首先找到 middle，然后把 middl.next 设为 None.
+然后调用 mergeLinkedList() 的方法
+
+Below is Java Solution :
 
 ```Java
 
@@ -46,4 +73,45 @@ public class Solution {
 
 ```
 
-TODO : Add Python Solution
+Next is Python solution :
+
+
+```Python
+
+class Solution:
+    def sortList(self, head: ListNode) -> ListNode:
+        # 使用归并排序
+        
+        if head is None or head.next is None:
+            return head
+        
+        slow,fast = head,head
+        
+        while fast.next is not None and fast.next.next is not None:
+            fast = fast.next.next
+            slow = slow.next
+        
+        newHead = slow.next
+        slow.next = None
+        
+        return self.mergeList(self.sortList(head),self.sortList(newHead))
+    
+    def mergeList(self,l1,l2):
+        
+        dummy = ListNode()
+        head = dummy
+        
+        while l1 and l2:
+            if l1.val<l2.val:
+                head.next = l1
+                l1 = l1.next
+            else:
+                head.next = l2
+                l2 = l2.next
+            
+            head = head.next
+        
+        head.next = l1 or l2
+        return dummy.next
+
+```

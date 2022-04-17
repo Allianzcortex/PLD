@@ -9,10 +9,14 @@ Given [ [0, 30], [5, 10], [15, 20] ],
 return false.
 ```
 
+Basic idea:
+
+很简单的方法，直接排序之后依次比较前一个的结束时间和后一个的开始时间
+
 The idea is pretty straight-forward. We sort the array and 
 compare one time with next time.
 
-Java Solution : Not Validated Yet
+Java 解法如下：
 
 ```java
 class Solution {
@@ -24,5 +28,20 @@ class Solution {
         return true
     }
 }
+
+```
+
+Python 解法如下：
+
+```Python
+
+def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
+    new_intervals = sorted(intervals,key=lambda x:x[0])
+
+    for i in range(1,len(new_intervals)):
+        if new_intervals[i-1][1]>new_intervals[i][0]:
+            return False
+    
+    return True
 
 ```

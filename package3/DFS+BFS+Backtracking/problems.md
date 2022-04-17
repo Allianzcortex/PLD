@@ -22,4 +22,46 @@
 31:M Next Permutation
 36 M Valid Sudoku
 37 H Sudoku Solver
+
+949:M: Largest Time for Given Digits
+
+841:M: Keys and Rooms
+971:M: Flip Binary Tree to Match Preorder Traversal
+
+78:M: Subsets
+90:M: Subsets II
+
+695:M: Max Area of Island
+
+127:H: Word Ladder
+130:M: Surrounded Regions
+
+200:M: Number of Islands
+
+140:H: Word Break II
+
+565:M: Array Nesting
+
+1239:M: Maximum Length of a Concatenated String with Unique Characters
+
+723:E: Flood Fill
+
+784:M: Letter Case Permutation
+
+463:E: Island Perimeter
+
+329:H: Longest Increasing Path in a Matrix
+
+733:E: Flood Fill
+
+994:M: Rotting Oranges
+
+386:M: Lexicographical Numbers
+
+1286:M: Iterator for Combination
+
+310:M: Minimum Height Trees
+
+1306:M: Jump Game III
+
 ```

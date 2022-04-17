@@ -65,4 +65,69 @@
 666:Lock:M: Path Sum IV
 437:M: Path Sum III
 337:M: House Robber III
+
+116:M: Populating Next Right Pointers in Each Node
+623:M: Add One Row to Tree
+
+971:M: Flip Binary Tree to Match Preorder Traversal
+114:M: Flatten Binary Tree to Linked List
+
+102:M: Binary Tree Level
+
+563:E: Binary Tree Tilt
+
+814:M: Binary Tree Pruning
+
+101:E: Symmetric Tree
+
+236:M: Lowest Common Ancestor of a Binary Tree
+958:M: Check Completeness of a Binary Tree
+
+297:H: Serialize and Deserialize Binary Tree
+
+1448:M: Count Good Nodes in Binary
+
+331:M: Verify Preordre Serialization of a Binary Tree
+
+124:H: Binary Tree Maximum Path Sum
+
+117:M: Populating Next Right Pointers in Each Node II
+
+129:M: Sum Root to Leaf Numbers
+
+1469:E:Lock: Find All The Lonely Nodes
+
+199:E: Binary Tree Right Side View
+
+173:M: Binary Search Tree Iterator
+
+513:M: Find Bottom Left Tree Value
+
+515:M: Find Largest Value in Each Tree Row
+
+543:E: Diameter of Binary Tree
+
+1038:M: Binary Search Tree to Greater Sum Tree
+
+572:E: Subtree of Another Tree
+
+987:H: Vertical Order Traversal of a Binary Tree
+
+687:M: Longest Univalue Path
+
+508:M: Most Frequent Subtree Sum
+
+1325:M: Delete Leaves With a Given Value
+
+222:M: Count Complete Tree Nodes
+
+285:M:Lock: Inorder Successor in BST
+
+863:M: All Nodes Distance K in Binary Tree
+
+652:M: Find Duplicate Subtrees
+
+450:M: Delete Node in a BST
+
+99:M: Recover Binary Search Tree
 ```

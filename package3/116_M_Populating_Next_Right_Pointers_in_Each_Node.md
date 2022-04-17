@@ -54,3 +54,56 @@ class Solution {
 }
 
 ```
+
+---
+
+Python Solution :
+
+Iterative one:
+
+```Python
+
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        
+        if not root:
+            return root 
+        
+        queue = deque([root])
+        
+        while queue:
+            size = len(queue)
+            for index in range(size):
+                cur = queue.popleft()
+                if cur.left is not None:
+                    queue.append(cur.left)
+                if cur.right is not None:
+                    queue.append(cur.right)
+                    
+                cur.next = queue[0] if index<size-1 else None
+
+        return root
+
+```
+
+And recursive solution :
+
+```Python
+
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        
+        if not root or not root.left:
+            return root 
+        
+        root.left.next = root.right
+        
+        if root.next is not None:
+            root.right.next = root.next.left
+        
+        self.connect(root.left)
+        self.connect(root.right)
+        
+        return root
+
+```

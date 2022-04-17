@@ -1,8 +1,71 @@
 
-Overall the basic idea is :
+Problem description :
 
-// 1 find the middle
-// 2 reverse linked list
+```
+Given the head of a singly linked list, return true if it is a palindrome.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,2,1]
+Output: true
+Example 2:
+
+
+Input: head = [1,2]
+Output: false
+
+```
+
+思路就是 :
+
+// 1 找到中点 find the middle
+// 2 反转后半部分 reverse linked list
+
+下面是 Python 解法：
+
+```Python
+
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        
+        slow,fast = head,head
+        
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+        
+        newHead = self.reverseList(slow)
+        return self.isEqual(newHead,head)
+    
+    def reverseList(self,head):
+        if head is None or head.next is None:
+            return head
+        
+        nextHead = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return nextHead
+    
+    
+    def isEqual(self,l1,l2):
+
+        while l1 and l2:
+            if l1.val != l2.val:
+                return False
+            
+            l1 = l1.next
+            l2 = l2.next
+        
+        return True
+
+```
+
+---
+
+这是 Java 解法：
 
 Java Solution : 
 

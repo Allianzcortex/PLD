@@ -30,4 +30,52 @@
 ? 276:E: Lock Paint Fence
 ? 1314:M: Matrix Block Sum
 
+799:M: Champagne Tower
+
+72:H:  Edit Distance
+139:M: Word Break
+
+91:M: Decode Ways
+
+238:M: Product Array Except Self
+
+132:H: Palindrome Partitioning II
+131:M: Palindrome Partitioning
+
+926:M: Flip String to Monotone Increasing
+
+304:M: Range Sum Query 2D - Immutable
+
+123:H: Best Time to Buy and Sell Stock III
+
+126:H: Word Ladder II
+
+1137:E: N-th Tribonacci Number
+978:E: Longest Turbulent Subarray
+
+115:H: Distinct Subsequences
+
+1218:M: Longest Arithmetic Subsequence of Given Difference
+
+931:M: Minimum Falling Path Sum
+
+309:M: Best Time to Buy and Sell Stock with Cooldown
+
+10:H: Regular Expression Matching
+
+97:M: Interleaving String
+
+416:M: Partition Equal Subset Sum
+
+1567:M: Maximum Length of Subarray With Positive Product
+
+1014:M: Best Sightseeing Pair
+
+413:M: Arithmetic Slices
+
+221:M: Maximal Square
+
+714:M: Best Time to Buy and Sell Stock with Transaction Fee
+
+494:M: Target Sum
 ```

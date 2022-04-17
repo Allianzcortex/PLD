@@ -13,4 +13,14 @@
 170 E Two Sum III Data Structure Design
 ? 358 H Rearrange String k Distant Apart
 1474 E Delete N Nodes After M Nodes of a LinkedList
+
+1165:E: Single Row Keyboard
+408:E: Valid Word Abbreviation
+
+293:E: Flip Game
+1065:E: Index Pairs of a String
+800:E:Similar RGB Color
+1271:E: Hex Speak
+
+266:E: Palindrome Permutation
 ```

@@ -118,7 +118,8 @@ class Solution {
 
 ---
 
-The same idea with Python quicksort implementation
+The same idea with Python quicksort implementation , and it becomes
+TLE with the new test metrics.
 
 ```Python
 
@@ -145,8 +146,60 @@ class Solution:
             nums[right]=nums[left]
             nums[left],nums[right] = nums[right],nums[left]
         nums[left]=pivot
-        return left;
+        return left
+```
+
+And here is Golang quicksort implementation:
+
+```Golang
+
+func sortArray(nums []int) []int {
+    
+    if nums==nil || len(nums)==0 {
+        return nums
+    }
+    
+    quickSort(nums,0,len(nums)-1)
+    return nums
+}
+
+func quickSort(nums []int,left int,right int) {
+    
+    if left>=right {
+        return
+    }
+    
+    pivot := findPivot(nums,left,right)
+    quickSort(nums,left,pivot-1)
+    quickSort(nums,pivot+1,right)
+}
+
+
+func findPivot(nums[] int,left int,right int) int {
+    
+    pivot:=nums[left]
+    
+    for left<right {
         
-
-
+        // search from right to left,find the element that is smaller than pivot
+        for left<right && nums[right]>=pivot {
+            right -= 1
+        }
+        nums[left] = nums[right]
+        
+        // search from left to right,find the element that is greater than pivot
+        for left<right && nums[left]<=pivot {
+            left += 1
+        }
+        nums[right] = nums[left]
+        
+        // swap left,right
+        nums[left],nums[right] = nums[right],nums[left]
+        
+    }
+    
+    nums[left] = pivot
+    return left
+    
+}
 ```

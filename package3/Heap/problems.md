@@ -7,4 +7,14 @@
 692:M: Top K Frequent Words
 451:M: Sort Characters By Frequency
 
+767:M: Reorganize String
+
+373:M: Find K Pairs with Smallest Sums
+973:M: K Closest Points to Origin
+
+1005:E: Maximize Sum of Array After K Negations
+
+1094:M: Car Pooling
+
+295:H: Find Median from Data Stream
 ```

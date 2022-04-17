@@ -1,4 +1,4 @@
-
+    
 Overall there I will provide 2 solutions:
 
 The 1st one is most trikcy : O(N^2)
@@ -80,6 +80,5 @@ class Solution:
         for num in nums1:
             res.append(map.get(num,-1))
         return res
-        
 
 ```

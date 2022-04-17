@@ -1,4 +1,70 @@
 
+Problem description:
+
+```
+
+Given a string s, return the longest palindromic substring in s.
+
+ 
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+Example 3:
+
+Input: s = "a"
+Output: "a"
+Example 4:
+
+Input: s = "ac"
+Output: "a"
+
+```
+
+Idea:
+
+这道题有很多解法，自己记住用 DP 的这种，时间复杂度是 O(N^2)
+
+有两种办法来构造 DP:
+
+- i 从左往右，j 从 i 向 0 递减
+
+- i 从右往左，j 从 i 向 len(s)-1 递增
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        
+        dp = [[False]*len(s) for _ in s]
+        
+        length = len(s)
+        maxRes ,left = 0,0
+        
+        for i in range(length-1,-1,-1):
+            for j in range(i,length):
+                if s[i]==s[j] and (j-i<=1):
+                    dp[i][j] = True
+                else:
+                    dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
+                
+                if dp[i][j] and (j-i+1)>maxRes:
+
+                    left = i
+                    maxRes = j-i+1
+        
+        return s[left:left+maxRes]
+
+```
+
 Firstly we build a DP boolean array.
 
 ```Java

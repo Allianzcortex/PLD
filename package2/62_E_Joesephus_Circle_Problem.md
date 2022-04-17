@@ -1,3 +1,11 @@
+
+Problem description:
+
+```
+
+
+```
+
 Two solutions:
 
 1. mock
@@ -26,3 +34,24 @@ class Solution {
 
 
 ```
+
+
+https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/huan-ge-jiao-du-ju-li-jie-jue-yue-se-fu-huan-by-as/
+
+这个解释是最清楚的，逆推公式，只关注最后一个元素的变化：
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def lastRemaining(self, n: int, m: int) -> int:
+        pos = 0 # for f(1,m)
+
+        for i in range(2,n+1):
+            pos = (pos+m)%i 
+        
+        return pos
+
+```
+
