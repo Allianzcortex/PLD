@@ -51,4 +51,5 @@
 1041 M Robot Bounded In Circle
 
 382 M Linked List Random Node
+1037 E Valid Boomerang
 ```
