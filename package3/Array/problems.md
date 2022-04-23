@@ -133,4 +133,6 @@
 1217 E Minimum Cost to Move Chips to The Same Position
 
 2099 E Find Subdequence of Length K With the Largest Sum
+
+1089 E Duplicate Zeros
 ```
