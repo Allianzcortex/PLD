@@ -121,4 +121,6 @@
 1347:M: Minimum Number of Steps to Make Two Strings Anagram
 
 2129:E: Capitalize the Title
+
+1652:E: Defuse the Bomb (一道考虑循环进位的题，非常有趣)
 ```
