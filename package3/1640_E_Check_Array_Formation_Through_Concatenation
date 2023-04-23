@@ -1,0 +1,75 @@
+
+Problem description:
+
+```
+
+You are given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is to form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].
+
+Return true if it is possible to form the array arr from pieces. Otherwise, return false.
+
+ 
+
+Example 1:
+
+Input: arr = [15,88], pieces = [[88],[15]]
+Output: true
+Explanation: Concatenate [15] then [88]
+Example 2:
+
+Input: arr = [49,18,16], pieces = [[16,18,49]]
+Output: false
+Explanation: Even though the numbers match, we cannot reorder pieces[0].
+Example 3:
+
+Input: arr = [91,4,64,78], pieces = [[78],[4,64],[91]]
+Output: true
+Explanation: Concatenate [91] then [4,64] then [78]
+ 
+
+Constraints:
+
+1 <= pieces.length <= arr.length <= 100
+sum(pieces[i].length) == arr.length
+1 <= pieces[i].length <= arr.length
+1 <= arr[i], pieces[i][j] <= 100
+The integers in arr are distinct.
+The integers in pieces are distinct (i.e., If we flatten pieces in a 1D array, all the integers in this array are distinct).
+
+```
+
+Base Idea:
+
+这道题好就好在已经说明了 arr 和 pieces 的元素都是 unique 的，所以就不用担心有重复。
+
+我个人思路就是存储一个：{首字母：piece 的 index} 对应关系，然后：
+
+1. 如果首字母在 arr 里对不上，那么直接返回 false
+2. 如果首字母对上，但之后迭代单个 piece 时候发现它又对应不上 arr 的后续数字，也返回 false
+3. 最后再返回 True
+
+Python 解法如下：
+
+```Python
+
+class Solution:
+    def canFormArray(self, arr: List[int], pieces: List[List[int]]) -> bool:
+        # use a match to store relationship between {first_character:index in pieces}
+        dic = {piece[0]:index for index,piece in enumerate(pieces)}
+        i = 0
+        while i<len(arr):
+            if arr[i] not in dic:
+                return False
+            
+            piece = pieces[dic[arr[i]]]
+            for num in piece:
+                if arr[i]==num:
+                    i+=1
+                else:
+                    return False
+        
+        return True
+
+```
+
+TODO: 参考题解
+TODO: add golang solution
