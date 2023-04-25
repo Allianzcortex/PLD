@@ -139,4 +139,6 @@
 1588 E Sum of All Odd Length Subarrays
 
 1752 E Check If Array Is Sorted and Rotated 算是很经典的一道题，数组轮寻
+
+1800 E Maximum Ascending Subarray Sum 单调递增区间最大值，虽然是 Easy 题，但也要注意边界条件
 ```
