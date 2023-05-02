@@ -142,3 +142,10 @@
 
 1800 E Maximum Ascending Subarray Sum 单调递增区间最大值，虽然是 Easy 题，但也要注意边界条件
 ```
+
+新
+
+```
+2661 M First Completely Painted Row or Column 一个二维矩阵，对 row 和 column 的 count 有要求，需要思路非常清晰才可以
+
+```
