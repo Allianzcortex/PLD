@@ -20,4 +20,6 @@
 355:M: Design Twitter
 
 348:M:Lock: Design Tic-Tac-Toe
+
+2671:M: Frequency Tracker 挺有趣的一道题，用 2 个 dict{} 来存储最后保存的结构
 ```
