@@ -22,3 +22,7 @@ Category :
 
 基本思路是先排序然后比较所有可能的 k 个选择的所有情况，就是设置一个长度为 K 的 window，从小到大套过去，
 每套一次就更新一下最大值
+
+2.4 344 Reverse String https://leetcode.com/problems/reverse-string/
+
+逆转字符串，就是最基本不过的 2-pointers 应用
