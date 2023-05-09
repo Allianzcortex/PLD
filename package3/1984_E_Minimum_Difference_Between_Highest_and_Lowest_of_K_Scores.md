@@ -37,22 +37,19 @@ Basic idea:
 
 Python 解法如下：
 
-基本思路是先排序然后比较所有可能的 k 个选择的所有情况
+基本思路是先排序然后比较所有可能的 k 个选择的所有情况。这道题一开始看到有点慌，在想是不是要选择 2 个 pointer 之后
+逐次比较接近，找到最小值。其实没这么复杂...
 
 ```Python
 
 class Solution:
     def minimumDifference(self, nums: List[int], k: int) -> int:
-        
         nums.sort()
-        n = len(nums)        
-        if n==1:
-            return 0
 
-        res = float('inf')
-        for i in range(n-k+1):
-            res = min(res, nums[i+k-1]-nums[i])
-
+        res=float('inf')
+        for i in range(len(nums)-k+1):
+            res = min(res,nums[i+k-1]-nums[i])
+        
         return res
 
 ```
