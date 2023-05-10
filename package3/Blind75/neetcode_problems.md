@@ -42,3 +42,8 @@ Category :
 这道题有一定难度哎，关键是临场要一次写对。定义两个指针 left 和 right，关键是想清对数组的
 前两个元素，left 和 right 一定是贴在一起的，对第三个元素，如果 nums[right]==nums[left-2]，那么就意味着当前 right 这边
 已经出现了 3 个连续的元素，right 要 +=1。如果 nums[right]!=nums[left-2]，那么就把 right 的值赋给 left 然后两者都向右移动
+
+2.9 167 M Two Sum II - Input Array Is Sorted
+
+虽然给了 Medium tag，但应该是 easy 难度，就是求出最小值和最大值之和，然后比较 target，进一步决定
+是要 left ++ 还是要 right --
