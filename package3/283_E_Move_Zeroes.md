@@ -48,6 +48,39 @@ class Solution:
 
 ```
 
+#### update 
+
+在 revisit 这道题的时候自己想出了类似上面的解法，但用的是 2 pointers 实现
+
+```Python
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        left,right = 0,0
+
+        while right<len(nums):
+            # find the number that isn't 0
+            while right<len(nums) and nums[right]==0:
+                right += 1
+            
+            if right>len(nums)-1:
+                break
+            
+            # swap left&right anyways
+            nums[left],nums[right] = nums[right],nums[left]
+            left += 1
+            right += 1
+        
+        # fill remaining position
+        while left<len(nums):
+            nums[left]=0
+            left += 1
+
+```
+
 2. 使用 two pointers，当 nums[slow]==0 和 nums[fast]!=0 的时候交换数字，然后在 nums[left]!=0 的时候再更新
 
 ```Python
