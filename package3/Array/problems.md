@@ -148,4 +148,7 @@
 ```
 2661 M First Completely Painted Row or Column 一个二维矩阵，对 row 和 column 的 count 有要求，需要思路非常清晰才可以
 
+1662 E Check If Two String Arrays are Equivalent
+简单解法可以一行，复杂解法就需要 4 个指针
+
 ```
