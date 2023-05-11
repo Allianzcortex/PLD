@@ -30,18 +30,18 @@ Constraints:
 
 ```
 
-The key is to avoid duplicated results :
 
-we need to do it for both `i` and `left/right` :
+这道题就是 two sum II 的变种，关键是避免重复要怎么避免。给定的结果会包含 3 个元素
+[(i,j,k)]
 
-case 1 for i :
+1. 对元素 i， 在移动的时候检查是否和前一个相等
 
 ```Python
 if i>0 and nums[i]==nums[i-1]:
                 continue
 ```
 
-case 2 for left/right :
+2. 对元素 j 和 k，就是在找到一个满足的例子时，要依次一直向右找和一直向左找
 
 ```Python
 left += 1
@@ -53,9 +53,9 @@ while right>left and nums[right]==nums[right+1]:
     right-=1
 ```
 
-Overall solutions will be :
 
-Java Solution :
+
+Java 解法如下 :
 
 ```Java
 
@@ -94,39 +94,37 @@ class Solution {
 
 ```
 
-Python Solution :
+Python 解法如下 :
 
 ```Python
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        """a b c d"""
+        # convert this problem to 2Sum II _ Input Sorted Array
         nums.sort()
-
         res = []
-        for i in range(0,len(nums)-2):
-            left,right = i+1,len(nums)-1
-            
-            if i>0 and nums[i]==nums[i-1]:
-                continue
-            
-            while left<right:
 
-                _sum = nums[left]+nums[right]+nums[i]
-                if _sum==0:
-                    
+        for i in range(len(nums)-2):
+            if(i>0 and nums[i]==nums[i-1]):
+                continue
+
+            left,right = i+1,len(nums)-1
+            target = 0-nums[i]
+
+            while left < right:
+                sum_ = nums[left]+nums[right]
+                if sum_==target:
                     res.append([nums[i],nums[left],nums[right]])
                     left += 1
                     while left<right and nums[left]==nums[left-1]:
                         left += 1
                     right -= 1
-                    while right>left and nums[right]==nums[right+1]:
-                        right-=1
-
-                elif _sum<0:
-                    left += 1
+                    while left<right and nums[right]==nums[right+1]:
+                        right -= 1
+                elif sum_<target:
+                    left+=1
                 else:
-                    right -= 1
+                    right-=1
         
         return res
 
