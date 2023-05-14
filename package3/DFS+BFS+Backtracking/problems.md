@@ -71,3 +71,6 @@
 下面是一个全新版本的实现：
 
 2658 M Maximum Number of Fish in a Grid 算是典型的题了，复习时候适合刷，掌握 pattern
+
+2684 M Maximum Number of Moves in a Grid 这道题也是一道典型的可以用 DFS/BFS/DP 做的题目，是很常见的
+一类 pattern，关键还是理解清楚什么时候计算 step 时候要 +1
