@@ -23,4 +23,6 @@
 225:E: Implement Stack using queues
 
 394:M: Decode String
+
+2696:E: Minimum String Length After Removing Substrings
 ```
