@@ -33,9 +33,11 @@ Output: true
 
 ```
 
-The key for this problem is to avoid complex boilerplate
+Basic Idea:
 
-My Solution
+这道题是 stack 最简单的体型。但还是有一些 trick
+
+Java 解法如下：
 
 ```Java
 
@@ -69,6 +71,8 @@ class Solution {
 
 ---
 
+Python 解法如下：
+
 ```Python
 
 class Solution:
@@ -79,8 +83,11 @@ class Solution:
             if ch in pairs.keys():
                 stack.append(ch)
             elif ch in pairs.values():
-                if stack==[] or pairs[stack.pop()]!=ch:
+                # 这里主要是预防第一个 ch 就是 empty
+                # 每次 stack pop 前都要想该 stack 是否有可能置空
+                if not stack or pairs[stack.pop()]!=ch:
                     return False
+        # 这里是为了预防 input 为 "(" 的情况，只有栈为空才说明括号互相 match            
         return stack==[]
 
 ```

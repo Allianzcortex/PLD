@@ -23,19 +23,20 @@ Category :
 基本思路是先排序然后比较所有可能的 k 个选择的所有情况，就是设置一个长度为 K 的 window，从小到大套过去，
 每套一次就更新一下最大值
 
-2.4 344 E Reverse String https://leetcode.com/problems/reverse-string/
+2.4 1768 E Merge Strings Alternately
+
+2.5 344 E Reverse String https://leetcode.com/problems/reverse-string/
 
 逆转字符串，就是最基本不过的 2-pointers 应用
 
-2.5 Merge Sorted Array
+2.6 Merge Sorted Array
 
 2.7 Remove Duplicates from Softed Array (easy 题之后统一处理)
 
 2.6 283 E Move Zeroes https://leetcode.com/problems/move-zeroes/
 
 这道题把所有的 0 往后排，其他的数字保持原有顺序，就是很经典的两个指针 left 和 right，right 一直往后移
-一直到发现第一个不为 0 的元素，然后和 left 交换位置。如果 left 本身不为 0，那么数组被保持；如果 left 为
-0，那么实现交换的效果。
+一直到发现第一个不为 0 的元素，然后和 left 交换位置。如果 left 本身不为 0，那么数组被保持；如果 left 为 0，那么实现交换的效果。
 
 2.8 80 M Remove Duplicates from Sorted Array II 
 
@@ -52,3 +53,23 @@ Category :
 
 用到了 167 的思路，先排序后找 pair，但注意不能包含重复元素，所以对返回元素 (i,j,k)
 既要对 i 去重，也要对 j&k 去重
+
+
+TODO: 后续题目更新
+
+---
+
+3. Sliding Window
+
+
+
+---
+
+4. Stack
+
+4.1 20 E Valid Parentheses
+
+这道题是最简单的 stack 应用，但 stack.pop() 前要检查是否为空，在循环结束后
+也要根据 stack 是否为空来判断是否所有的括号都 match，否则就无法判断类似 `"("`
+这样只有左括号输入的情况
+
